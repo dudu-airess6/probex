@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Acionamento do SAMU 192 e Roteiro de Fala para Educadores (PROBEX / Unit)">
+    <meta name="theme-color" content="#DC2626">
+    <title>Ligar 192 SAMU | SBV Pediátrico</title>
+    
+    <!-- CSS Arquitetura Modular -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/emergencia.css">
+</head>
+<body class="modo-emergencia">
+
+    <!-- Cabeçalho de Emergência -->
+    <header class="header-emergencia">
+        <span class="badge-emergencia-rapida">🚑 SERVIÇO DE ATENDIMENTO MÓVEL</span>
+        <h1>ACIONAR O SAMU 192</h1>
+    </header>
+
+    <main class="main-content">
+
+        <!-- BOTÃO DIRETO DE DISCAGEM -->
+        <section class="samu-call-section" style="margin-top: var(--espaco-sm);">
+            <a href="tel:192" class="btn-samu-banner" style="background: var(--cor-emergencia); box-shadow: var(--sombra-emergencia); padding: var(--espaco-lg);">
+                <span class="samu-icon" style="font-size: 2.5rem;">📞</span>
+                <div class="samu-text">
+                    <strong style="font-size: 1.5rem;">TOQUE PARA LIGAR 192</strong>
+                    <span style="color: #FFF;">Atendimento Gratuito 24h (SAMU)</span>
+                </div>
+            </a>
+        </section>
+
+        <!-- ROTEIRO DE FALA PARA O PROFESSOR / CUIDADOR -->
+        <article class="passo-card" style="margin-top: var(--espaco-lg);">
+            
+            <header class="passo-header">
+                <span class="passo-numero">ROTEIRO DE FALA</span>
+                <span class="passo-total">O que dizer ao atendente do 192</span>
+            </header>
+
+            <h2 class="passo-instrucao" style="color: var(--cor-principal-hover);">
+                1. "Preciso de socorro urgente! Uma criança [ENGASGOU GRAVE / NÃO RESPONDE E NÃO RESPIRA]."
+            </h2>
+
+            <div style="background: var(--cor-destaque); border-left: 4px solid var(--cor-destaque-texto); padding: var(--espaco-md); border-radius: var(--raio-md); margin-bottom: var(--espaco-md);">
+                📍 <strong>ENDEREÇO DA ESCOLA (LEIA PARA O ATENDENTE):</strong><br>
+                <strong>EMEI Professora Joana Maria da Silva</strong><br>
+                Rua Carlos Gomes, nº 180, Bairro Farolândia<br>
+                Aracaju - SE
+            </div>
+
+            <h2 class="passo-instrucao">
+                2. Informe a idade aproximada: <em>"É um bebê de __ meses"</em> ou <em>"Uma criança de __ anos"</em>.
+            </h2>
+
+            <h2 class="passo-instrucao">
+                3. Ligue o <strong>VIVA-VOZ</strong> do celular e siga as orientações do médico regulador por telefone enquanto mantém o socorro.
+            </h2>
+
+            <div class="passo-alerta-grave">
+                🛑 <strong>NUNCA DESLIGUE A LIGAÇÃO</strong> antes do atendente autorizar!
+            </div>
+
+        </article>
+
+        <!-- OUTROS NÚMEROS ÚTEIS -->
+        <section style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--espaco-md); margin-top: var(--espaco-md);">
+            <a href="tel:193" class="btn-passo btn-passo-ant" style="background: #FFF; border-color: var(--cor-emergencia); color: var(--cor-emergencia);">
+                🚒 193 Bombeiros
+            </a>
+            <a href="index.html" class="btn-passo btn-passo-prox">
+                ⬅️ Voltar à Triagem
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Navegação Inferior Fixa -->
+    <nav class="bottom-nav" aria-label="Navegação Principal">
+        <a href="index.html" class="nav-item nav-emergency ativo">
+            <span class="nav-icon">🚨</span>
+            <span class="nav-label">Emergência</span>
+        </a>
+        <a href="../aprender/index.html" class="nav-item">
+            <span class="nav-icon">📘</span>
+            <span class="nav-label">Aprender</span>
+        </a>
+        <a href="../pesquisa/tcle.html" class="nav-item">
+            <span class="nav-icon">✏️</span>
+            <span class="nav-label">Treinar</span>
+        </a>
+        <a href="../institucional/sobre.html" class="nav-item">
+            <span class="nav-icon">ℹ️</span>
+            <span class="nav-label">Mais</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="../js/core/storage.js" defer></script>
+    <script src="../js/modules/emergencia.js" defer></script>
+</body>
+</html>

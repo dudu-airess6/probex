@@ -1,0 +1,391 @@
+/* ==========================================================================
+   PROBEX - SBV PediÃ¡trico na Escola
+   Estilos de Componentes da Interface (assets/css/componentes.css)
+   ========================================================================== */
+
+/* --- 1. CabeÃ§alho Institucional (.app-header) --- */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-inverso);
+  padding: var(--espaco-sm) var(--espaco-md);
+  box-shadow: var(--sombra-md);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-unit {
+  font-size: var(--tamanho-fonte-xs);
+  font-weight: var(--peso-extrabold);
+  letter-spacing: 0.05em;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: var(--raio-sm);
+  width: fit-content;
+  margin-bottom: 2px;
+}
+
+.app-title {
+  font-size: var(--tamanho-fonte-lg);
+  font-weight: var(--peso-extrabold);
+  color: var(--cor-texto-inverso);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.app-subtitle {
+  font-size: var(--tamanho-fonte-xs);
+  opacity: 0.9;
+  margin: 0;
+  color: var(--cor-destaque);
+}
+
+.btn-samu-header {
+  background-color: var(--cor-emergencia);
+  color: var(--cor-texto-inverso);
+  font-weight: var(--peso-extrabold);
+  font-size: var(--tamanho-fonte-sm);
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: var(--raio-full);
+  box-shadow: var(--sombra-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-xs);
+  transition: transform var(--transicao-rapida), background-color var(--transicao-rapida);
+}
+
+.btn-samu-header:hover,
+.btn-samu-header:focus {
+  background-color: var(--cor-emergencia-hover);
+  color: var(--cor-texto-inverso);
+  transform: scale(1.05);
+}
+
+/* --- 2. Card de Boas-Vindas / Hero (.hero-card) --- */
+.hero-card {
+  background-color: var(--cor-superficie);
+  border-left: 4px solid var(--cor-principal);
+  border-radius: var(--raio-md);
+  padding: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+  box-shadow: var(--sombra-sm);
+}
+
+.hero-title {
+  font-size: var(--tamanho-fonte-lg);
+  color: var(--cor-principal);
+  margin-bottom: var(--espaco-xs);
+}
+
+.hero-text {
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto-suave);
+  line-height: 1.4;
+}
+
+/* --- 3. AÃ§Ã£o Principal de EmergÃªncia (.btn-emergency-main) --- */
+.emergency-action-section {
+  margin-bottom: var(--espaco-lg);
+}
+
+.btn-emergency-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(135deg, var(--cor-emergencia) 0%, #B91C1C 100%);
+  color: var(--cor-texto-inverso);
+  padding: var(--espaco-lg) var(--espaco-md);
+  border-radius: var(--raio-xl);
+  box-shadow: var(--sombra-emergencia);
+  text-align: center;
+  text-decoration: none;
+  transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-emergency-main:hover,
+.btn-emergency-main:focus {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.5);
+  color: var(--cor-texto-inverso);
+}
+
+.btn-emergency-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--espaco-xs);
+  animation: pulse-icon 2s infinite ease-in-out;
+}
+
+@keyframes pulse-icon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.btn-emergency-text {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-xl);
+  font-weight: var(--peso-extrabold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.btn-emergency-sub {
+  font-size: var(--tamanho-fonte-xs);
+  opacity: 0.95;
+  margin-top: var(--espaco-xs);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 3px 12px;
+  border-radius: var(--raio-full);
+}
+
+/* --- 4. Atalhos RÃ¡pidos (.quick-shortcuts-grid) --- */
+.quick-shortcuts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-md);
+  margin-top: var(--espaco-md);
+}
+
+.shortcut-card {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+  background-color: var(--cor-superficie);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-lg);
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-sm);
+  transition: transform var(--transicao-rapida), border-color var(--transicao-rapida);
+  text-decoration: none;
+}
+
+.shortcut-card:hover,
+.shortcut-card:focus {
+  transform: translateY(-2px);
+  border-color: var(--cor-principal);
+}
+
+.shortcut-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.shortcut-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.shortcut-info strong {
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto);
+  line-height: 1.2;
+}
+
+.shortcut-info small {
+  font-size: var(--tamanho-fonte-xs);
+  color: var(--cor-texto-suave);
+  margin-top: 2px;
+}
+
+.shortcut-engasgo { border-left: 4px solid #F59E0B; }
+.shortcut-pcr { border-left: 4px solid var(--cor-emergencia); }
+
+/* --- 5. Banner de LigaÃ§Ã£o SAMU (.samu-call-section) --- */
+.samu-call-section {
+  margin-bottom: var(--espaco-lg);
+}
+
+.btn-samu-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-md);
+  background-color: var(--cor-emergencia-leve);
+  border: 1.5px solid var(--cor-emergencia);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-lg);
+  text-decoration: none;
+  transition: background-color var(--transicao-rapida);
+}
+
+.btn-samu-banner:hover,
+.btn-samu-banner:focus {
+  background-color: #FEE2E2;
+}
+
+.samu-icon {
+  font-size: 2rem;
+}
+
+.samu-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.samu-text strong {
+  font-size: var(--tamanho-fonte-md);
+  color: var(--cor-emergencia);
+  font-weight: var(--peso-bold);
+}
+
+.samu-text span {
+  font-size: var(--tamanho-fonte-xs);
+  color: var(--cor-texto-suave);
+}
+
+/* --- 6. Grid de MÃ³dulos da Home (.modules-grid) --- */
+.home-modules-section {
+  margin-bottom: var(--espaco-lg);
+}
+
+.section-title {
+  font-size: var(--tamanho-fonte-lg);
+  color: var(--cor-texto);
+  margin-bottom: var(--espaco-md);
+  padding-bottom: var(--espaco-xs);
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.modules-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+}
+
+.module-card {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-md);
+  background-color: var(--cor-superficie);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-lg);
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-sm);
+  transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida);
+  text-decoration: none;
+}
+
+.module-card:hover,
+.module-card:focus {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-md);
+}
+
+.module-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--raio-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.bg-rosa {
+  background-color: var(--cor-principal-leve);
+  color: var(--cor-principal);
+}
+
+.bg-verde {
+  background-color: var(--cor-suporte-leve);
+  color: var(--cor-suporte);
+}
+
+.bg-amarelo {
+  background-color: #FEF9C3;
+  color: var(--cor-destaque-texto);
+}
+
+.module-body h4 {
+  font-size: var(--tamanho-fonte-md);
+  color: var(--cor-texto);
+  margin-bottom: 2px;
+}
+
+.module-body p {
+  font-size: var(--tamanho-fonte-xs);
+  color: var(--cor-texto-suave);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* --- 7. Aviso Legal (.legal-notice-banner) --- */
+.legal-notice-banner {
+  background-color: var(--cor-destaque);
+  color: var(--cor-destaque-texto);
+  font-size: var(--tamanho-fonte-xs);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-md);
+  line-height: 1.4;
+  border-left: 4px solid var(--cor-destaque-texto);
+  margin-bottom: var(--espaco-md);
+}
+
+/* --- 8. NavegaÃ§Ã£o Inferior Fixa (.bottom-nav) --- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background-color: var(--cor-superficie);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: var(--altura-bottom-nav);
+  border-top: 1px solid var(--cor-borda);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--cor-texto-suave);
+  text-decoration: none;
+  font-size: var(--tamanho-fonte-xs);
+  font-weight: var(--peso-semibold);
+  width: 25%;
+  height: 100%;
+  transition: color var(--transicao-rapida);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+}
+
+.nav-label {
+  line-height: 1;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item.active {
+  color: var(--cor-principal);
+}
+
+.nav-emergency {
+  color: var(--cor-emergencia);
+}
+
+.nav-emergency:hover,
+.nav-emergency:focus,
+.nav-emergency.active {
+  color: var(--cor-emergencia-hover);
+}

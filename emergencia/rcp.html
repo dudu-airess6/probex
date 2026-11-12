@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Ressuscitação Cardiorrespiratória (RCP) Pediátrica - Guia Passo a Passo com Metrônomo (PROBEX / Unit)">
+    <meta name="theme-color" content="#DC2626">
+    <title>RCP Pediátrica (30:2) | SBV Pediátrico</title>
+    
+    <!-- CSS Arquitetura Modular -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/emergencia.css">
+</head>
+<body class="modo-emergencia">
+
+    <!-- Cabeçalho de Emergência -->
+    <header class="header-emergencia">
+        <span class="badge-emergencia-rapida">🫀 PARADA CARDIORRESPIRATÓRIA (PCR)</span>
+        <h1 id="rcp-titulo-faixa">RCP PEDIÁTRICA (30:2)</h1>
+    </header>
+
+    <main class="main-content">
+
+        <!-- LIGAR 192 ALERTA -->
+        <section class="passo-alerta-grave" role="alert">
+            📞 <strong>AÇÃO IMEDIATA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong> e buscar o <strong>DEA</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie as compressões no chão!
+        </section>
+
+        <!-- SELETOR DE IDADE PARA ALTERNAR TÉCNICA DA RCP -->
+        <div class="seletor-idade-grid" style="margin-bottom: var(--espaco-md);">
+            <button type="button" class="btn-opcao-idade ativo" id="tab-rcp-bebe">
+                <span class="idade-icone">👶</span>
+                <span class="idade-titulo">TÉCNICA BEBÊ</span>
+                <span class="idade-faixa">&lt; 1 ano (~4 cm)</span>
+            </button>
+            <button type="button" class="btn-opcao-idade" id="tab-rcp-crianca">
+                <span class="idade-icone">🧒</span>
+                <span class="idade-titulo">TÉCNICA CRIANÇA</span>
+                <span class="idade-faixa">≥ 1 ano (~5 cm)</span>
+            </button>
+        </div>
+
+        <!-- METRÔNOMO VISUAL E SONORO (100 a 120 BPM) -->
+        <section class="metronomo-box">
+            <div class="metronomo-pulso pulsando" id="metronomo-visual"></div>
+            <div class="metronomo-bpm">RITMO: 100 - 120 BPM</div>
+            <p style="font-size: 0.85rem; color: var(--cor-destaque-texto);">Siga a frequência deste pulso para comprimir o peito sem parar.</p>
+            <button type="button" id="btn-toggle-audio" class="btn-passo btn-passo-ant" style="padding: 6px 12px; font-size: 0.85rem; min-height: auto;">
+                🔊 Ligar Som do Metrônomo
+            </button>
+        </section>
+
+        <!-- CARD DE PASSO A PASSO DA RCP -->
+        <article class="passo-card">
+            
+            <header class="passo-header">
+                <span class="passo-numero">CICLO 30 : 2</span>
+                <span class="passo-total">30 Compressões + 2 Ventilações</span>
+            </header>
+
+            <div id="conteudo-tecnica-rcp">
+                <!-- Conteúdo alterado dinamicamente via JS (emergencia.js) -->
+                <h2 class="passo-instrucao">
+                    1. Posicione a vítima de costas em superfície RÍGIDA e PLANA (no chão).
+                </h2>
+                <h2 class="passo-instrucao">
+                    2. No centro do peito (linha dos mamilos), comprima com a base de uma mão ou com os 2 polegares abraçando o tórax.
+                </h2>
+                <div class="passo-alerta-grave">
+                    🚫 <strong>DIRETRIZ AHA 2025:</strong> A antiga técnica de 2 dedos foi substituída! Use a base da mão ou os 2 polegares.
+                </div>
+            </div>
+
+            <!-- DICA DE REVEZAMENTO -->
+            <div style="background: var(--cor-fundo-alt); padding: var(--espaco-md); border-radius: var(--raio-md); margin-top: var(--espaco-md);">
+                ⏱️ <strong>Revezamento:</strong> Se houver outra pessoa ajudando, troquem de lugar a cada 2 minutos para manter a qualidade das compressões sem cansaço.
+            </div>
+
+        </article>
+
+        <!-- BOTÕES DE ATALHO DEA E SAMU -->
+        <section style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--espaco-md); margin-top: var(--espaco-md);">
+            <a href="dea.html" class="btn-passo btn-passo-ant" style="background: #FFF; border-color: var(--cor-principal); color: var(--cor-principal);">
+                ⚡ Chegou o DEA?
+            </a>
+            <a href="ligar-192.html" class="btn-passo btn-passo-prox">
+                📞 Ligar 192 SAMU
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Navegação Inferior Fixa -->
+    <nav class="bottom-nav" aria-label="Navegação Principal">
+        <a href="index.html" class="nav-item nav-emergency ativo">
+            <span class="nav-icon">🚨</span>
+            <span class="nav-label">Emergência</span>
+        </a>
+        <a href="../aprender/index.html" class="nav-item">
+            <span class="nav-icon">📘</span>
+            <span class="nav-label">Aprender</span>
+        </a>
+        <a href="../pesquisa/tcle.html" class="nav-item">
+            <span class="nav-icon">✏️</span>
+            <span class="nav-label">Treinar</span>
+        </a>
+        <a href="../institucional/sobre.html" class="nav-item">
+            <span class="nav-icon">ℹ️</span>
+            <span class="nav-label">Mais</span>
+        </a>
+    </nav>
+
+    <!-- Scripts da Arquitetura Modular (Sem scripts inline) -->
+    <script src="../js/core/storage.js" defer></script>
+    <script src="../js/modules/emergencia.js" defer></script>
+</body>
+</html>

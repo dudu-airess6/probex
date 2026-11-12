@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Engasgo Grave em Bebê (Menos de 1 ano) - Passo a Passo de Desobstrução (PROBEX / Unit)">
+    <meta name="theme-color" content="#DC2626">
+    <title>Engasgo Bebê (< 1 ano) | SBV Pediátrico</title>
+    
+    <!-- CSS Arquitetura Modular -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/emergencia.css">
+</head>
+<body class="modo-emergencia">
+
+    <!-- Cabeçalho do Passo a Passo -->
+    <header class="header-emergencia">
+        <span class="badge-emergencia-rapida">👶 BEBÊ (< 1 ANO) • ENGASGO GRAVE</span>
+        <h1>MANOBRA DE DESENGASGO</h1>
+    </header>
+
+    <main class="main-content">
+
+        <!-- LIGAR 192 ALERTA -->
+        <section class="passo-alerta-grave" role="alert">
+            📞 <strong>PEÇA AJUDA AGORA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie as manobras imediatamente!
+        </section>
+
+        <!-- CONTAINER DO PASSO A PASSO INTERATIVO -->
+        <article class="passo-card" id="passo-bebe-container">
+            
+            <header class="passo-header">
+                <span class="passo-numero" id="passo-numero-tag">PASSO 1 DE 5</span>
+                <span class="passo-total">Ciclo 5 Golpes : 5 Compressões</span>
+            </header>
+
+            <!-- TÍTULO E INSTRUÇÃO DIRETA DO PASSO -->
+            <h2 class="passo-instrucao" id="passo-instrucao-texto">
+                1. Posicione o bebê de bruços no seu antebraço, apoiado na sua coxa. Mantenha a cabeça mais baixa que o corpo. Segure a mandíbula (queixo) em "C" sem apertar a garganta.
+            </h2>
+
+            <!-- ALERTA DE ERRO COMUM / PROIBIÇÃO -->
+            <div class="passo-alerta-grave" id="passo-alerta-especifico">
+                🚫 <strong>NUNCA:</strong> Não segure o bebê de ponta-cabeça pelas pernas e não garroteie o pescoço.
+            </div>
+
+            <!-- NAVEGAÇÃO ENTRE PASSOS -->
+            <div class="controles-passo">
+                <button type="button" class="btn-passo btn-passo-ant" id="btn-passo-anterior" disabled>
+                    ⬅️ Voltar
+                </button>
+                <button type="button" class="btn-passo btn-passo-prox" id="btn-passo-proximo">
+                    Próximo Passo ➡️
+                </button>
+            </div>
+
+        </article>
+
+        <!-- BOTÃO DE EMERGÊNCIA SE O BEBÊ DESMAIAR -->
+        <section style="margin-top: var(--espaco-lg);">
+            <a href="rcp.html?idade=bebe" class="btn-emergency-main" style="padding: var(--espaco-md); min-height: auto;">
+                <span class="btn-emergency-icon" style="font-size: 1.5rem;">⚠️</span>
+                <span class="btn-emergency-text" style="font-size: 1.1rem;">O BEBÊ DESMAIOU / FICOU MOLE?</span>
+                <span class="btn-emergency-sub">Clique aqui para iniciar a RCP imediatamente</span>
+            </a>
+        </section>
+
+        <!-- AVISOS E PROIBIÇÕES CRÍTICAS (AHA 2025 / SBP) -->
+        <section class="hero-card" style="margin-top: var(--espaco-xl); background: #FFF; border-left: 4px solid var(--cor-emergencia);">
+            <h3 style="color: var(--cor-emergencia); margin-bottom: var(--espaco-sm);">🚫 O que NUNCA fazer em engasgo de bebê:</h3>
+            <ul style="padding-left: var(--espaco-lg); font-size: 0.9rem; color: var(--cor-texto-suave);">
+                <li><strong>NÃO faça compressões na barriga</strong> em bebês (risco grave de lesão de órgãos internos).</li>
+                <li><strong>NÃO enfie o dedo no fundo da boca às cegas</strong> (pode empurrar o objeto mais para o fundo).</li>
+                <li><strong>NÃO dê água, leite ou óleo.</strong></li>
+                <li><strong>NÃO use a técnica de 2 dedos</strong> nas compressões (Diretriz AHA 2025 atualizada: use a base de uma mão ou dois polegares).</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Navegação Inferior Fixa -->
+    <nav class="bottom-nav" aria-label="Navegação Principal">
+        <a href="index.html" class="nav-item nav-emergency ativo">
+            <span class="nav-icon">🚨</span>
+            <span class="nav-label">Emergência</span>
+        </a>
+        <a href="../aprender/index.html" class="nav-item">
+            <span class="nav-icon">📘</span>
+            <span class="nav-label">Aprender</span>
+        </a>
+        <a href="../pesquisa/tcle.html" class="nav-item">
+            <span class="nav-icon">✏️</span>
+            <span class="nav-label">Treinar</span>
+        </a>
+        <a href="../institucional/sobre.html" class="nav-item">
+            <span class="nav-icon">ℹ️</span>
+            <span class="nav-label">Mais</span>
+        </a>
+    </nav>
+
+    <!-- Scripts da Arquitetura Modular -->
+    <script src="../js/core/storage.js" defer></script>
+    <script src="../js/modules/emergencia.js" defer></script>
+</body>
+</html>

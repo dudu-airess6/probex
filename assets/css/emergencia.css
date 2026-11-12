@@ -1,0 +1,301 @@
+/* ==========================================================================
+   PROBEX - SBV PediÃ¡trico na Escola
+   Estilos Exclusivos do Modo EmergÃªncia (assets/css/emergencia.css)
+   ========================================================================== */
+
+/* --- 1. Tema de EmergÃªncia (Alto Contraste) --- */
+body.modo-emergencia {
+  background-color: var(--cor-emergencia-leve);
+  color: var(--cor-texto);
+  font-family: var(--fonte-emergencia);
+}
+
+.header-emergencia {
+  background-color: var(--cor-emergencia);
+  color: var(--cor-texto-inverso);
+  padding: var(--espaco-md);
+  text-align: center;
+  box-shadow: var(--sombra-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-emergencia h1 {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-xl);
+  font-weight: var(--peso-extrabold);
+  letter-spacing: 0.5px;
+  color: var(--cor-texto-inverso);
+}
+
+.badge-emergencia-rapida {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--cor-texto-inverso);
+  font-size: var(--tamanho-fonte-xs);
+  font-weight: var(--peso-bold);
+  padding: var(--espaco-xs) var(--espaco-sm);
+  border-radius: var(--raio-full);
+  margin-bottom: var(--espaco-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- 2. Triagem de EmergÃªncia (Engasgo vs PCR) --- */
+.triagem-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  margin-top: var(--espaco-md);
+}
+
+.triagem-titulo {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-xl);
+  font-weight: var(--peso-extrabold);
+  text-align: center;
+  color: var(--cor-emergencia-hover);
+}
+
+.triagem-subtitulo {
+  text-align: center;
+  font-size: var(--tamanho-fonte-md);
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espaco-sm);
+}
+
+.card-triagem {
+  background-color: var(--cor-superficie);
+  border: 3px solid var(--cor-borda-forte);
+  border-radius: var(--raio-xl);
+  padding: var(--espaco-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-md);
+  box-shadow: var(--sombra-md);
+  text-decoration: none;
+  color: var(--cor-texto);
+  transition: transform var(--transicao-rapida), border-color var(--transicao-rapida);
+}
+
+.card-triagem:hover,
+.card-triagem:focus-visible {
+  transform: translateY(-2px);
+}
+
+.card-triagem.triagem-engasgo {
+  border-color: #EAB308; /* Amarelo alerta engasgo */
+  background-color: #FEFCE8;
+}
+
+.card-triagem.triagem-pcr {
+  border-color: var(--cor-emergencia);
+  background-color: var(--cor-emergencia-leve);
+}
+
+.triagem-icone {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.triagem-info h3 {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-lg);
+  font-weight: var(--peso-extrabold);
+  margin-bottom: var(--espaco-xs);
+}
+
+.triagem-info p {
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto-suave);
+  margin-bottom: 0;
+}
+
+/* --- 3. SeleÃ§Ã£o de Faixa EtÃ¡ria (BebÃª vs CrianÃ§a) --- */
+.seletor-idade-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-md);
+  margin-top: var(--espaco-md);
+}
+
+.btn-opcao-idade {
+  background-color: var(--cor-superficie);
+  border: 3px solid var(--cor-principal);
+  border-radius: var(--raio-lg);
+  padding: var(--espaco-lg) var(--espaco-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco-xs);
+  cursor: pointer;
+  transition: all var(--transicao-rapida);
+}
+
+.btn-opcao-idade:hover,
+.btn-opcao-idade.ativo {
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-inverso);
+}
+
+.btn-opcao-idade .idade-icone {
+  font-size: 2.25rem;
+}
+
+.btn-opcao-idade .idade-titulo {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-lg);
+  font-weight: var(--peso-extrabold);
+}
+
+.btn-opcao-idade .idade-faixa {
+  font-size: var(--tamanho-fonte-xs);
+}
+
+/* --- 4. Cards de Passo a Passo (Manobras Socorro) --- */
+.passo-card {
+  background-color: var(--cor-superficie);
+  border: 2px solid var(--cor-emergencia);
+  border-radius: var(--raio-xl);
+  padding: var(--espaco-lg);
+  box-shadow: var(--sombra-lg);
+  margin-bottom: var(--espaco-lg);
+}
+
+.passo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--espaco-md);
+  padding-bottom: var(--espaco-sm);
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.passo-numero {
+  background-color: var(--cor-emergencia);
+  color: var(--cor-texto-inverso);
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-lg);
+  font-weight: var(--peso-extrabold);
+  padding: var(--espaco-xs) var(--espaco-md);
+  border-radius: var(--raio-full);
+}
+
+.passo-total {
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto-suave);
+  font-weight: var(--peso-bold);
+}
+
+.passo-midia {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  background-color: var(--cor-fundo-alt);
+  border-radius: var(--raio-md);
+  margin-bottom: var(--espaco-md);
+}
+
+.passo-instrucao {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-lg);
+  font-weight: var(--peso-bold);
+  line-height: 1.4;
+  color: var(--cor-texto);
+  margin-bottom: var(--espaco-md);
+}
+
+.passo-alerta-grave {
+  background-color: #FEF2F2;
+  border-left: 4px solid var(--cor-emergencia);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-sm);
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-emergencia-hover);
+  font-weight: var(--peso-semibold);
+  margin-bottom: var(--espaco-md);
+}
+
+/* --- 5. MetrÃ´nomo de RCP (100 a 120 BPM) --- */
+.metronomo-box {
+  background-color: var(--cor-texto);
+  color: var(--cor-texto-inverso);
+  border-radius: var(--raio-lg);
+  padding: var(--espaco-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espaco-sm);
+  margin-bottom: var(--espaco-md);
+}
+
+.metronomo-pulso {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--cor-emergencia);
+  box-shadow: 0 0 0 rgba(220, 38, 38, 0.4);
+}
+
+.metronomo-pulso.pulsando {
+  animation: pulsoMetronomo 0.55s infinite alternate;
+}
+
+@keyframes pulsoMetronomo {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  100% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 15px rgba(220, 38, 38, 0);
+  }
+}
+
+.metronomo-bpm {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-xl);
+  font-weight: var(--peso-extrabold);
+  color: var(--cor-destaque);
+}
+
+/* --- 6. BotÃµes de AÃ§Ã£o Imediata e NavegaÃ§Ã£o PrÃ³ximo/Anterior --- */
+.controles-passo {
+  display: flex;
+  gap: var(--espaco-md);
+  margin-top: var(--espaco-md);
+}
+
+.btn-passo {
+  flex: 1;
+  padding: var(--espaco-md);
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-lg);
+  font-weight: var(--peso-extrabold);
+  border-radius: var(--raio-lg);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-xs);
+  min-height: 54px;
+}
+
+.btn-passo-ant {
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-borda-forte);
+}
+
+.btn-passo-prox {
+  background-color: var(--cor-emergencia);
+  color: var(--cor-texto-inverso);
+  box-shadow: var(--sombra-emergencia);
+}
+
+.btn-passo-prox:hover {
+  background-color: var(--cor-emergencia-hover);
+}

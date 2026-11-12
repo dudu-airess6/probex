@@ -1,0 +1,82 @@
+/* ==========================================================================
+   PROBEX - SBV PediÃ¡trico na Escola
+   Design Tokens & VariÃ¡veis CSS (assets/css/variables.css)
+   ========================================================================== */
+
+:root {
+  /* --- Paleta de Cores Oficial (Diretriz PROBEX / Unit) --- */
+  --cor-principal: #B83A6B;        /* Rosa institucional */
+  --cor-principal-hover: #9E2E59;  /* Rosa tom escuro para hover */
+  --cor-principal-leve: #FDF2F7;   /* Rosa muito claro para fundos/cards */
+
+  --cor-suporte: #26795F;          /* Verde acertos, progresso e sucesso */
+  --cor-suporte-hover: #1E604B;    /* Verde escuro hover */
+  --cor-suporte-leve: #EAF5F1;     /* Verde claro para fundos */
+
+  --cor-emergencia: #DC2626;       /* Vermelho alerta / emergÃªncia alto contraste */
+  --cor-emergencia-hover: #B91C1C; /* Vermelho escuro hover */
+  --cor-emergencia-leve: #FEF2F2;  /* Vermelho muito claro */
+
+  --cor-destaque: #FFE8A3;         /* Amarelo avisos e destaques */
+  --cor-destaque-texto: #854D0E;   /* Amarelo texto escuro legÃ­vel */
+
+  --cor-fundo: #FFFFFF;            /* Branco puro */
+  --cor-fundo-alt: #F8FAFC;        /* Cinza neutro muito claro */
+  --cor-superficie: #FFFFFF;       /* Cor de superfÃ­cies de cards/modais */
+
+  /* --- Cores Neutras / Texto --- */
+  --cor-texto: #1E293B;            /* Grafite escuro / Slate 800 */
+  --cor-texto-suave: #64748B;      /* Cinza mÃ©dio / Slate 500 */
+  --cor-texto-inverso: #FFFFFF;    /* Texto sobre fundo escuro/colorido */
+  --cor-borda: #E2E8F0;            /* Cinza claro para bordas */
+  --cor-borda-forte: #CBD5E1;      /* Cinza intermediÃ¡rio */
+
+  /* --- Tipografia (Fontes Locais & Fallbacks) --- */
+  --fonte-geral: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --fonte-emergencia: 'Atkinson Hyperlegible', 'Nunito', system-ui, -apple-system, sans-serif;
+
+  /* --- Tamanhos de Fonte --- */
+  --tamanho-fonte-xs: 0.75rem;     /* 12px */
+  --tamanho-fonte-sm: 0.875rem;    /* 14px */
+  --tamanho-fonte-md: 1rem;        /* 16px - Leitura base / passo a passo */
+  --tamanho-fonte-lg: 1.125rem;    /* 18px - BotÃµes de emergÃªncia mÃ­nimos */
+  --tamanho-fonte-xl: 1.25rem;     /* 20px */
+  --tamanho-fonte-2xl: 1.5rem;     /* 24px */
+  --tamanho-fonte-3xl: 1.875rem;   /* 30px */
+
+  /* --- Pesos de Fonte --- */
+  --peso-regular: 400;
+  --peso-semibold: 600;
+  --peso-bold: 700;
+  --peso-extrabold: 800;
+
+  /* --- EspaÃ§amentos (Grid / Layout) --- */
+  --espaco-xs: 0.25rem;    /* 4px */
+  --espaco-sm: 0.5rem;     /* 8px */
+  --espaco-md: 1rem;       /* 16px */
+  --espaco-lg: 1.5rem;     /* 24px */
+  --espaco-xl: 2rem;       /* 32px */
+  --espaco-2xl: 3rem;      /* 48px */
+
+  /* --- Bordas Arredondadas --- */
+  --raio-sm: 0.375rem;     /* 6px */
+  --raio-md: 0.5rem;       /* 8px */
+  --raio-lg: 0.75rem;      /* 12px */
+  --raio-xl: 1rem;         /* 16px */
+  --raio-full: 9999px;     /* PÃ­lula / BotÃ£o redondo */
+
+  /* --- Sombras --- */
+  --sombra-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --sombra-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --sombra-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --sombra-emergencia: 0 8px 25px rgba(220, 38, 38, 0.35);
+
+  /* --- DimensÃµes de Layout & NavegaÃ§Ã£o --- */
+  --largura-maxima: 640px;        /* Layout responsivo focado em telas mobile */
+  --altura-header: 64px;
+  --altura-bottom-nav: 68px;
+
+  /* --- TransiÃ§Ãµes --- */
+  --transicao-rapida: 0.15s ease-in-out;
+  --transicao-padrao: 0.25s ease-in-out;
+}
