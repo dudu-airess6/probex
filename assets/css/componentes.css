@@ -4,6 +4,14 @@
    ========================================================================== */
 
 /* --- 1. Cabeçalho Institucional (.app-header) --- */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+
 .skip-link {
   position: fixed;
   top: var(--espaco-sm);
@@ -25,15 +33,17 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--cor-principal);
-  color: var(--cor-texto-inverso);
-  padding: var(--espaco-sm) var(--espaco-md);
-  box-shadow: var(--sombra-md);
+  font-family: var(--fonte-geral);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  padding: 12px var(--espaco-md);
+  border-bottom: 1px solid var(--cor-borda);
+  box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06);
 }
 
 .header-content {
   width: 100%;
-  max-width: var(--largura-maxima);
+  max-width: var(--largura-desktop);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -43,34 +53,55 @@
 
 .brand-info {
   display: flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+  min-width: 0;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border: 1px solid #f2c8d8;
+  border-radius: 15px 15px 15px 5px;
+  background-color: var(--cor-principal-leve);
+  color: var(--cor-principal);
+}
+
+.brand-mark .icon {
+  width: 25px;
+  height: 25px;
+}
+
+.brand-copy {
+  display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
 .badge-unit {
   font-size: var(--tamanho-fonte-xs);
-  font-weight: var(--peso-extrabold);
-  letter-spacing: 0.05em;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 2px 8px;
-  border-radius: var(--raio-sm);
+  font-weight: var(--peso-bold);
+  color: var(--cor-principal-hover);
   width: fit-content;
-  margin-bottom: 2px;
+  line-height: 1.2;
 }
 
 .app-title {
-  font-size: var(--tamanho-fonte-lg);
+  font-size: var(--tamanho-fonte-xl);
   font-weight: var(--peso-extrabold);
-  color: var(--cor-texto-inverso);
+  color: var(--cor-texto);
   margin: 0;
   line-height: 1.1;
 }
 
 .app-subtitle {
   font-size: var(--tamanho-fonte-xs);
-  opacity: 0.95;
   margin: 0;
-  color: var(--cor-destaque);
+  color: var(--cor-texto-suave);
+  line-height: 1.25;
 }
 
 .btn-samu-header {
@@ -431,6 +462,119 @@
   line-height: 1.4;
 }
 
+.learning-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xl);
+}
+
+.learning-intro {
+  max-width: 68ch;
+}
+
+.learning-intro h1 {
+  font-size: var(--tamanho-fonte-3xl);
+  margin-bottom: var(--espaco-sm);
+}
+
+.learning-intro p {
+  color: var(--cor-texto-suave);
+  font-size: var(--tamanho-fonte-lg);
+  line-height: 1.6;
+}
+
+.learning-modules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-md);
+}
+
+.learning-module {
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.learning-module .module-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.learning-module-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-bottom: var(--espaco-xs);
+}
+
+.learning-module-heading h3 {
+  font-size: var(--tamanho-fonte-md);
+}
+
+.learning-duration,
+.learning-status {
+  color: var(--cor-texto-suave);
+  font-size: var(--tamanho-fonte-xs);
+}
+
+.learning-duration {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.learning-status {
+  display: inline-block;
+  margin-top: var(--espaco-sm);
+}
+
+.learning-emergency {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espaco-lg);
+  padding: var(--espaco-lg);
+  border-left: 4px solid var(--cor-emergencia);
+  background-color: var(--cor-emergencia-leve);
+}
+
+.learning-emergency h2 {
+  font-size: var(--tamanho-fonte-lg);
+  margin-bottom: var(--espaco-xs);
+}
+
+.learning-emergency p {
+  color: var(--cor-texto-suave);
+  margin: 0;
+}
+
+.learning-emergency-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-sm);
+  min-height: 48px;
+  width: 100%;
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: var(--raio-md);
+  background-color: var(--cor-emergencia);
+  color: var(--cor-texto-inverso);
+  font-weight: var(--peso-bold);
+  white-space: nowrap;
+}
+
+.learning-emergency-link:hover,
+.learning-emergency-link:focus {
+  background-color: var(--cor-emergencia-hover);
+  color: var(--cor-texto-inverso);
+}
+
+.learning-note {
+  padding-top: var(--espaco-md);
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+  font-size: var(--tamanho-fonte-sm);
+}
+
 /* --- 8. Grade Responsiva Genérica de 2 Botões (.action-grid-2) --- */
 .action-grid-2 {
   display: grid;
@@ -517,8 +661,19 @@
     grid-template-columns: 1fr;
   }
 
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    border-radius: 13px 13px 13px 4px;
+  }
+
+  .brand-info {
+    gap: var(--espaco-xs);
+  }
+
   .app-title {
-    font-size: var(--tamanho-fonte-md);
+    font-size: var(--tamanho-fonte-lg);
   }
 }
 
@@ -527,15 +682,31 @@
   .modules-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .learning-modules-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .learning-emergency {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .learning-emergency-link {
+    width: auto;
+  }
 }
 
 @media (min-width: 768px) {
   .app-header {
-    padding: var(--espaco-md) var(--espaco-lg);
+    padding: 12px var(--espaco-lg);
   }
 
-  .app-title {
-    font-size: var(--tamanho-fonte-xl);
+  .brand-mark {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
   }
 
   .bottom-nav {
@@ -588,7 +759,7 @@
 /* --- 13. Responsividade Computador / Desktop (1024px+) --- */
 @media (min-width: 1024px) {
   .app-header {
-    padding: var(--espaco-md) var(--espaco-xl);
+    padding: 12px var(--espaco-xl);
   }
 
   .home-top-grid {
@@ -605,6 +776,10 @@
     gap: var(--espaco-lg);
   }
 
+  .learning-modules-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .module-card {
     flex-direction: column;
     align-items: flex-start;
@@ -618,6 +793,14 @@
 
   .module-body p {
     font-size: var(--tamanho-fonte-sm);
+  }
+
+  .learning-module {
+    flex-direction: column;
+  }
+
+  .learning-emergency {
+    padding: var(--espaco-xl);
   }
 
   .legal-notice-banner {

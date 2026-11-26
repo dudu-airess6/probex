@@ -15,13 +15,31 @@
 </head>
 <body class="modo-emergencia">
 
+    <header class="app-header" aria-label="Identificação do projeto">
+        <div class="header-content">
+            <div class="brand-info">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#heart-pulse"></use></svg>
+                </span>
+                <div class="brand-copy">
+                    <span class="badge-unit">PROBEX / Unit</span>
+                    <span class="app-title">SBV Pediátrico</span>
+                    <p class="app-subtitle">EMEI Profª Joana Maria da Silva</p>
+                </div>
+            </div>
+            <a href="ligar-192.html" class="btn-samu-header" aria-label="Ligar para o SAMU 192">
+                <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#phone"></use></svg>
+                <span>192</span>
+            </a>
+        </div>
+    </header>
+
     <!-- Cabeçalho de Alerta de Emergência -->
-    <header class="header-emergencia">
+    <header class="header-emergencia" aria-label="Navegação de emergência">
         <div class="header-emergencia-inner">
-            <div class="header-emergencia-acoes">
-                <a href="../index.html" class="btn-voltar-header">🏠 Início</a>
-                <span class="badge-emergencia-rapida">🚨 MODO DE EMERGÊNCIA • 1 TOQUE</span>
-                <a href="ligar-192.html" class="btn-voltar-header">📞 192</a>
+            <div class="header-emergencia-acoes header-emergencia-acoes--triagem">
+                <a href="../index.html" class="btn-voltar-header"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#house"></use></svg> Início</a>
+                <span class="badge-emergencia-rapida"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#siren"></use></svg> MODO DE EMERGÊNCIA • 1 TOQUE</span>
             </div>
             <h1>O QUE ESTÁ ACONTECENDO?</h1>
         </div>
@@ -31,7 +49,8 @@
 
         <!-- REGRA DE OURO (Sempre visível no topo) -->
         <section class="passo-alerta-grave" role="alert">
-            ⚡ <strong>REGRA DE OURO:</strong> Peça imediatamente para alguém <strong>LIGAR 192</strong> e buscar o <strong>DEA</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie o atendimento!
+            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#zap"></use></svg>
+            <strong>REGRA DE OURO:</strong> Peça imediatamente para alguém <strong>LIGAR 192</strong> e buscar o <strong>DEA</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie o atendimento!
         </section>
 
         <!-- PASSO 1: TRIAGEM DO TIPO DE OCORRÊNCIA -->
@@ -40,7 +59,7 @@
             <!-- OPÇÃO 1: ENGASGO / OVACE -->
             <div class="triagem-coluna" id="engasgo">
                 <div class="card-triagem triagem-engasgo">
-                    <span class="triagem-icone" aria-hidden="true">🥪</span>
+                    <span class="triagem-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#wind"></use></svg></span>
                     <div class="triagem-info">
                         <h3>ESTÁ ENGASGADO(A)</h3>
                         <p>Não consegue tossir, chorar nem falar. Lábios arroxeados ou agitação.</p>
@@ -50,12 +69,12 @@
                 <!-- SELEÇÃO DE IDADE PARA ENGASGO -->
                 <div class="seletor-idade-grid" id="seletor-engasgo">
                     <a href="engasgo-bebe.html" class="btn-opcao-idade">
-                        <span class="idade-icone" aria-hidden="true">👶</span>
+                        <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#baby"></use></svg></span>
                         <span class="idade-titulo">BEBÊ</span>
                         <span class="idade-faixa">Menos de 1 ano</span>
                     </a>
                     <a href="engasgo-crianca.html" class="btn-opcao-idade">
-                        <span class="idade-icone" aria-hidden="true">🧒</span>
+                        <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#person-standing"></use></svg></span>
                         <span class="idade-titulo">CRIANÇA</span>
                         <span class="idade-faixa">1 ano até a puberdade</span>
                     </a>
@@ -65,7 +84,7 @@
             <!-- OPÇÃO 2: PARADA CARDIORRESPIRATÓRIA / PCR -->
             <div class="triagem-coluna" id="pcr">
                 <div class="card-triagem triagem-pcr">
-                    <span class="triagem-icone" aria-hidden="true">🫀</span>
+                    <span class="triagem-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#heart-pulse"></use></svg></span>
                     <div class="triagem-info">
                         <h3>NÃO RESPONDE E NÃO RESPIRA</h3>
                         <p>Desmaiado(a), inconsciente ou apenas "ofegando" (gasping).</p>
@@ -75,12 +94,12 @@
                 <!-- SELEÇÃO DE IDADE PARA PCR -->
                 <div class="seletor-idade-grid" id="seletor-pcr">
                     <a href="rcp.html?idade=bebe" class="btn-opcao-idade">
-                        <span class="idade-icone" aria-hidden="true">👶</span>
+                        <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#baby"></use></svg></span>
                         <span class="idade-titulo">RCP BEBÊ</span>
                         <span class="idade-faixa">Menos de 1 ano</span>
                     </a>
                     <a href="rcp.html?idade=crianca" class="btn-opcao-idade">
-                        <span class="idade-icone" aria-hidden="true">🧒</span>
+                        <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#person-standing"></use></svg></span>
                         <span class="idade-titulo">RCP CRIANÇA</span>
                         <span class="idade-faixa">1 ano até a puberdade</span>
                     </a>
@@ -92,16 +111,17 @@
         <!-- ATALHOS COMPLEMENTARES DE EMERGÊNCIA -->
         <section class="action-grid-2">
             <a href="dea.html" class="btn-passo btn-passo-secundario">
-                ⚡ Como Usar o DEA
+                <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#zap"></use></svg> Como Usar o DEA
             </a>
             <a href="ligar-192.html" class="btn-passo btn-passo-prox">
-                📞 Ligar 192 SAMU
+                <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#phone"></use></svg> Ligar 192 SAMU
             </a>
         </section>
 
         <!-- AVISO LEGAL PERMANENTE DE RODAPÉ -->
         <aside class="legal-notice-banner" style="margin-top: var(--espaco-lg);" role="note">
-            ⚠️ <strong>Aviso:</strong> Mantenha a calma. Siga cada passo da tela. Em dúvida, inicie compressões no centro do peito.
+            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#siren"></use></svg>
+            <strong>Aviso:</strong> Mantenha a calma. Siga cada passo da tela. Em dúvida, inicie compressões no centro do peito.
         </aside>
 
     </main>
@@ -109,19 +129,19 @@
     <!-- Navegação Inferior Fixa (Bottom Nav - 4 Abas) -->
     <nav class="bottom-nav" aria-label="Navegação Principal">
         <a href="index.html" class="nav-item nav-emergency ativo">
-            <span class="nav-icon">🚨</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#siren"></use></svg></span>
             <span class="nav-label">Emergência</span>
         </a>
         <a href="../aprender/index.html" class="nav-item">
-            <span class="nav-icon">📘</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#book-open"></use></svg></span>
             <span class="nav-label">Aprender</span>
         </a>
         <a href="../pesquisa/tcle.html" class="nav-item">
-            <span class="nav-icon">✏️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#clipboard-list"></use></svg></span>
             <span class="nav-label">Treinar</span>
         </a>
         <a href="../institucional/sobre.html" class="nav-item">
-            <span class="nav-icon">ℹ️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#info"></use></svg></span>
             <span class="nav-label">Mais</span>
         </a>
     </nav>

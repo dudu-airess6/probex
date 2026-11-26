@@ -15,13 +15,32 @@
 </head>
 <body class="modo-emergencia">
 
+    <header class="app-header" aria-label="Identificação do projeto">
+        <div class="header-content">
+            <div class="brand-info">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#heart-pulse"></use></svg>
+                </span>
+                <div class="brand-copy">
+                    <span class="badge-unit">PROBEX / Unit</span>
+                    <span class="app-title">SBV Pediátrico</span>
+                    <p class="app-subtitle">EMEI Profª Joana Maria da Silva</p>
+                </div>
+            </div>
+            <a href="ligar-192.html" class="btn-samu-header" aria-label="Ligar para o SAMU 192">
+                <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#phone"></use></svg>
+                <span>192</span>
+            </a>
+        </div>
+    </header>
+
     <!-- Cabeçalho de Emergência -->
-    <header class="header-emergencia">
+    <header class="header-emergencia" aria-label="Navegação de emergência">
         <div class="header-emergencia-inner">
             <div class="header-emergencia-acoes">
-                <a href="index.html" class="btn-voltar-header">⬅️ Triagem</a>
-                <span class="badge-emergencia-rapida">🫀 PARADA CARDIORRESPIRATÓRIA (PCR)</span>
-                <a href="../index.html" class="btn-voltar-header">🏠 Início</a>
+                <a href="index.html" class="btn-voltar-header"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#arrow-left"></use></svg> Triagem</a>
+                <span class="badge-emergencia-rapida"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#heart-pulse"></use></svg> PARADA CARDIORRESPIRATÓRIA (PCR)</span>
+                <a href="../index.html" class="btn-voltar-header"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#house"></use></svg> Início</a>
             </div>
             <h1 id="rcp-titulo-faixa">RCP BEBÊ (&lt; 1 ANO) • 30:2</h1>
         </div>
@@ -31,18 +50,19 @@
 
         <!-- LIGAR 192 ALERTA -->
         <section class="passo-alerta-grave" role="alert">
-            📞 <strong>AÇÃO IMEDIATA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong> e buscar o <strong>DEA</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie as compressões no chão!
+            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#phone"></use></svg>
+            <strong>AÇÃO IMEDIATA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong> e buscar o <strong>DEA</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie as compressões no chão!
         </section>
 
         <!-- SELETOR DE IDADE PARA ALTERNAR TÉCNICA DA RCP -->
         <div class="seletor-idade-grid" style="margin-bottom: var(--espaco-lg);" role="group" aria-label="Selecionar faixa etária">
             <button type="button" class="btn-opcao-idade ativo" id="tab-rcp-bebe" aria-pressed="true">
-                <span class="idade-icone" aria-hidden="true">👶</span>
+                <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#baby"></use></svg></span>
                 <span class="idade-titulo">TÉCNICA BEBÊ</span>
                 <span class="idade-faixa">&lt; 1 ano (~4 cm)</span>
             </button>
             <button type="button" class="btn-opcao-idade" id="tab-rcp-crianca" aria-pressed="false">
-                <span class="idade-icone" aria-hidden="true">🧒</span>
+                <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#person-standing"></use></svg></span>
                 <span class="idade-titulo">TÉCNICA CRIANÇA</span>
                 <span class="idade-faixa">≥ 1 ano (~5 cm)</span>
             </button>
@@ -55,7 +75,7 @@
                 <div class="metronomo-bpm">RITMO: 100 - 120 BPM</div>
                 <p class="metronomo-descricao">Siga a frequência deste pulso para comprimir o peito sem parar.</p>
                 <button type="button" id="btn-toggle-audio" class="btn-metronomo-audio" aria-pressed="false">
-                    🔊 Ligar Som do Metrônomo
+                    <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#volume-2"></use></svg> Ligar Som do Metrônomo
                 </button>
             </section>
 
@@ -77,13 +97,15 @@
                             2. No centro do peito (logo abaixo da linha dos mamilos), comprima cerca de 4 cm (1/3 do tórax) com a base de uma mão ou os 2 polegares abraçando o tórax.
                         </p>
                         <div class="passo-alerta-grave">
-                            🚫 <strong>DIRETRIZ AHA 2025:</strong> A antiga técnica de 2 dedos foi substituída! Use a base de uma mão ou os 2 polegares abraçando o tórax.
+                            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#info"></use></svg>
+                            <strong>DIRETRIZ AHA 2025:</strong> A antiga técnica de 2 dedos foi substituída! Use a base de uma mão ou os 2 polegares abraçando o tórax.
                         </div>
                     </div>
 
                     <!-- DICA DE REVEZAMENTO -->
                     <div class="dica-revezamento">
-                        ⏱️ <strong>Revezamento:</strong> Se houver outra pessoa ajudando, troquem de lugar a cada 2 minutos para manter a qualidade das compressões sem cansaço.
+                        <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#clock-3"></use></svg>
+                        <strong>Revezamento:</strong> Se houver outra pessoa ajudando, troquem de lugar a cada 2 minutos para manter a qualidade das compressões sem cansaço.
                     </div>
 
                 </article>
@@ -91,10 +113,10 @@
                 <!-- BOTÕES DE ATALHO DEA E SAMU -->
                 <section class="action-grid-2" style="margin-top: 0;">
                     <a href="dea.html" class="btn-passo btn-passo-secundario">
-                        ⚡ Chegou o DEA?
+                        <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#zap"></use></svg> Chegou o DEA?
                     </a>
                     <a href="ligar-192.html" class="btn-passo btn-passo-prox">
-                        📞 Ligar 192 SAMU
+                        <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#phone"></use></svg> Ligar 192 SAMU
                     </a>
                 </section>
             </div>
@@ -105,19 +127,19 @@
     <!-- Navegação Inferior Fixa -->
     <nav class="bottom-nav" aria-label="Navegação Principal">
         <a href="index.html" class="nav-item nav-emergency ativo">
-            <span class="nav-icon">🚨</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#siren"></use></svg></span>
             <span class="nav-label">Emergência</span>
         </a>
         <a href="../aprender/index.html" class="nav-item">
-            <span class="nav-icon">📘</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#book-open"></use></svg></span>
             <span class="nav-label">Aprender</span>
         </a>
         <a href="../pesquisa/tcle.html" class="nav-item">
-            <span class="nav-icon">✏️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#clipboard-list"></use></svg></span>
             <span class="nav-label">Treinar</span>
         </a>
         <a href="../institucional/sobre.html" class="nav-item">
-            <span class="nav-icon">ℹ️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#info"></use></svg></span>
             <span class="nav-label">Mais</span>
         </a>
     </nav>

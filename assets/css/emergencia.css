@@ -15,9 +15,8 @@ body.modo-emergencia {
   color: var(--cor-texto-inverso);
   padding: var(--espaco-sm) var(--espaco-md) var(--espaco-md);
   box-shadow: var(--sombra-md);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative;
+  z-index: 1;
 }
 
 .header-emergencia-inner {
@@ -69,6 +68,7 @@ body.modo-emergencia {
 
 .badge-emergencia-rapida {
   display: inline-block;
+  min-width: 0;
   background-color: rgba(255, 255, 255, 0.25);
   color: var(--cor-texto-inverso);
   font-size: var(--tamanho-fonte-xs);
@@ -77,6 +77,9 @@ body.modo-emergencia {
   border-radius: var(--raio-full);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: normal;
 }
 
 /* --- 2. Triagem de Emergência (Engasgo vs PCR) --- */
@@ -566,6 +569,40 @@ body.modo-emergencia {
 
 /* --- 8. Responsividade Celular Pequeno (<= 380px) --- */
 @media (max-width: 380px) {
+  .header-emergencia-acoes {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .badge-emergencia-rapida {
+    padding: 2px 6px;
+    font-size: 0.6875rem;
+  }
+
+  .header-emergencia-acoes > a:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  .header-emergencia-acoes > a:last-of-type {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .header-emergencia-acoes > .badge-emergencia-rapida {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    max-width: 100%;
+  }
+
+  .header-emergencia-acoes.header-emergencia-acoes--triagem {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .seletor-idade-grid {
     grid-template-columns: 1fr;
   }
@@ -599,6 +636,7 @@ body.modo-emergencia {
     min-height: 120px;
   }
 }
+
 
 /* --- 10. Responsividade Computador / Desktop (960px+) --- */
 @media (min-width: 960px) {

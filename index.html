@@ -24,12 +24,18 @@
     <header class="app-header">
         <div class="header-content">
             <div class="brand-info">
-                <span class="badge-unit">PROBEX / UNIT</span>
-                <h1 class="app-title">SBV Pediátrico</h1>
-                <p class="app-subtitle">EMEI Profª Joana Maria da Silva</p>
+                <span class="brand-mark" aria-hidden="true">
+                    <svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#heart-pulse"></use></svg>
+                </span>
+                <div class="brand-copy">
+                    <span class="badge-unit">PROBEX / Unit</span>
+                    <h1 class="app-title">SBV Pediátrico</h1>
+                    <p class="app-subtitle">EMEI Profª Joana Maria da Silva</p>
+                </div>
             </div>
             <a href="emergencia/ligar-192.html" class="btn-samu-header" aria-label="Ligar para o SAMU 192">
-                📞 192
+                <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#phone"></use></svg>
+                <span>192</span>
             </a>
         </div>
     </header>
@@ -41,7 +47,7 @@
             <!-- AÇÃO CRÍTICA: Botão de Emergência Rápida (Alto Contraste) -->
             <section class="emergency-action-section" aria-label="Acesso Rápido de Emergência">
                 <a href="emergencia/index.html" class="btn-emergency-main">
-                    <span class="btn-emergency-icon" aria-hidden="true">🚨</span>
+                    <span class="btn-emergency-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#siren"></use></svg></span>
                     <span class="btn-emergency-text">EMERGÊNCIA AGORA</span>
                     <span class="btn-emergency-sub">Sem login • Passo a passo imediato</span>
                 </a>
@@ -49,14 +55,14 @@
                 <!-- Atalhos Rápidos por Tipo de Ocorrência -->
                 <div class="quick-shortcuts-grid">
                     <a href="emergencia/index.html#engasgo" class="shortcut-card shortcut-engasgo">
-                        <span class="shortcut-icon" aria-hidden="true">🥪</span>
+                        <span class="shortcut-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#wind"></use></svg></span>
                         <div class="shortcut-info">
                             <strong>Criança Engasgada</strong>
                             <small>OVACE (Bebê ou Criança)</small>
                         </div>
                     </a>
                     <a href="emergencia/index.html#pcr" class="shortcut-card shortcut-pcr">
-                        <span class="shortcut-icon" aria-hidden="true">🫀</span>
+                        <span class="shortcut-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#heart-pulse"></use></svg></span>
                         <div class="shortcut-info">
                             <strong>Criança Desmaiada</strong>
                             <small>Inconsciente / Não respira</small>
@@ -77,7 +83,7 @@
                 <!-- Botão Fixo de Acionamento Direto do 192 -->
                 <section class="samu-call-section">
                     <a href="emergencia/ligar-192.html" class="btn-samu-banner">
-                        <span class="samu-icon" aria-hidden="true">🚑</span>
+                        <span class="samu-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#ambulance"></use></svg></span>
                         <div class="samu-text">
                             <strong>LIGAR SAMU 192</strong>
                             <span>Roteiro de fala e endereço da escola</span>
@@ -93,7 +99,7 @@
             <div class="modules-grid">
                 
                 <a href="aprender/index.html" class="module-card">
-                    <div class="module-icon-wrapper bg-rosa" aria-hidden="true">📘</div>
+                    <div class="module-icon-wrapper bg-rosa" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#book-open"></use></svg></div>
                     <div class="module-body">
                         <h4>Aprender</h4>
                         <p>Lei Lucas, prevenção de engasgo, técnicas de RCP e uso do DEA.</p>
@@ -101,7 +107,7 @@
                 </a>
 
                 <a href="pesquisa/tcle.html" class="module-card">
-                    <div class="module-icon-wrapper bg-verde" aria-hidden="true">✏️</div>
+                    <div class="module-icon-wrapper bg-verde" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#clipboard-list"></use></svg></div>
                     <div class="module-body">
                         <h4>Treinar / Pesquisa</h4>
                         <p>TCLE, Pré-Teste Diagnóstico, Quizzes e Pós-Teste pareado.</p>
@@ -109,7 +115,7 @@
                 </a>
 
                 <a href="institucional/sobre.html" class="module-card">
-                    <div class="module-icon-wrapper bg-amarelo" aria-hidden="true">ℹ️</div>
+                    <div class="module-icon-wrapper bg-amarelo" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#info"></use></svg></div>
                     <div class="module-body">
                         <h4>Sobre o Projeto</h4>
                         <p>Conheça a equipe de Medicina Unit e as referências científicas (AHA 2025).</p>
@@ -121,26 +127,27 @@
 
         <!-- Aviso Legal Fixo de Rodapé -->
         <aside class="legal-notice-banner" role="note">
-            ⚠️ <strong>Aviso Importante:</strong> Este site educativo não substitui o curso presencial com simulação em manequins. Em caso de emergência real, acione imediatamente o <strong>SAMU 192</strong>.
+            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#siren"></use></svg>
+            <strong>Aviso Importante:</strong> Este site educativo não substitui o curso presencial com simulação em manequins. Em caso de emergência real, acione imediatamente o <strong>SAMU 192</strong>.
         </aside>
     </main>
 
     <!-- Navegação Inferior Fixa (Bottom Nav - 4 Abas) -->
     <nav class="bottom-nav" aria-label="Navegação Principal">
         <a href="emergencia/index.html" class="nav-item nav-emergency">
-            <span class="nav-icon" aria-hidden="true">🚨</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#siren"></use></svg></span>
             <span class="nav-label">Emergência</span>
         </a>
         <a href="aprender/index.html" class="nav-item">
-            <span class="nav-icon" aria-hidden="true">📘</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#book-open"></use></svg></span>
             <span class="nav-label">Aprender</span>
         </a>
         <a href="pesquisa/tcle.html" class="nav-item">
-            <span class="nav-icon" aria-hidden="true">✏️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#clipboard-list"></use></svg></span>
             <span class="nav-label">Treinar</span>
         </a>
         <a href="institucional/sobre.html" class="nav-item">
-            <span class="nav-icon" aria-hidden="true">ℹ️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="assets/icons/lucide.svg#info"></use></svg></span>
             <span class="nav-label">Mais</span>
         </a>
     </nav>

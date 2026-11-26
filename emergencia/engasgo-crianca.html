@@ -15,13 +15,32 @@
 </head>
 <body class="modo-emergencia">
 
+    <header class="app-header" aria-label="Identificação do projeto">
+        <div class="header-content">
+            <div class="brand-info">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#heart-pulse"></use></svg>
+                </span>
+                <div class="brand-copy">
+                    <span class="badge-unit">PROBEX / Unit</span>
+                    <span class="app-title">SBV Pediátrico</span>
+                    <p class="app-subtitle">EMEI Profª Joana Maria da Silva</p>
+                </div>
+            </div>
+            <a href="ligar-192.html" class="btn-samu-header" aria-label="Ligar para o SAMU 192">
+                <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#phone"></use></svg>
+                <span>192</span>
+            </a>
+        </div>
+    </header>
+
     <!-- Cabeçalho do Passo a Passo -->
-    <header class="header-emergencia">
+    <header class="header-emergencia" aria-label="Navegação de emergência">
         <div class="header-emergencia-inner">
             <div class="header-emergencia-acoes">
-                <a href="index.html" class="btn-voltar-header">⬅️ Triagem</a>
-                <span class="badge-emergencia-rapida">🧒 CRIANÇA (≥ 1 ANO) • ENGASGO GRAVE</span>
-                <a href="../index.html" class="btn-voltar-header">🏠 Início</a>
+                <a href="index.html" class="btn-voltar-header"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#arrow-left"></use></svg> Triagem</a>
+                <span class="badge-emergencia-rapida"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#person-standing"></use></svg> CRIANÇA (≥ 1 ANO) • ENGASGO GRAVE</span>
+                <a href="../index.html" class="btn-voltar-header"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#house"></use></svg> Início</a>
             </div>
             <h1>MANOBRA DE HEIMLICH & GOLPES</h1>
         </div>
@@ -31,7 +50,8 @@
 
         <!-- LIGAR 192 ALERTA -->
         <section class="passo-alerta-grave" role="alert">
-            📞 <strong>PEÇA AJUDA AGORA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e comece o socorro!
+            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#phone"></use></svg>
+            <strong>PEÇA AJUDA AGORA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e comece o socorro!
         </section>
 
         <div class="emergencia-layout">
@@ -55,16 +75,16 @@
 
                     <!-- ALERTA DE ERRO COMUM / PROIBIÇÃO -->
                     <div class="passo-alerta-grave" id="passo-alerta-crianca">
-                        <strong>🚫 ATENÇÃO: </strong>Se a criança estiver tossindo com força ou falando (engasgo leve), apenas incentive a tosse!
+                        <strong>ATENÇÃO: </strong>Se a criança estiver tossindo com força ou falando (engasgo leve), apenas incentive a tosse!
                     </div>
 
                     <!-- NAVEGAÇÃO ENTRE PASSOS -->
                     <div class="controles-passo">
                         <button type="button" class="btn-passo btn-passo-ant" id="btn-passo-ant-crianca" disabled>
-                            ⬅️ Voltar
+                            <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#arrow-left"></use></svg> Voltar
                         </button>
                         <button type="button" class="btn-passo btn-passo-prox" id="btn-passo-prox-crianca">
-                            Próximo Passo ➡️
+                            Próximo Passo <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#arrow-right"></use></svg>
                         </button>
                     </div>
 
@@ -73,7 +93,7 @@
                 <!-- BOTÃO DE EMERGÊNCIA SE A CRIANÇA DESMAIAR -->
                 <section>
                     <a href="rcp.html?idade=crianca" class="btn-emergency-main btn-emergency-main--compacto">
-                        <span class="btn-emergency-icon" aria-hidden="true">⚠️</span>
+                        <span class="btn-emergency-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#heart-pulse"></use></svg></span>
                         <span class="btn-emergency-text">A CRIANÇA DESMAIOU / FICOU INCONSCIENTE?</span>
                         <span class="btn-emergency-sub">Clique aqui para iniciar a RCP imediatamente</span>
                     </a>
@@ -83,7 +103,7 @@
             <aside class="emergencia-coluna-apoio">
                 <!-- DICAS E RECOMENDAÇÕES (AHA 2025 / SBP) -->
                 <section class="hero-card card-orientacoes">
-                    <h3>💡 Orientações Importantes:</h3>
+                    <h3><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#info"></use></svg> Orientações Importantes:</h3>
                     <ul class="lista-orientacoes">
                         <li><strong>Posição da mão na compressão abdominal:</strong> Punho fechado com o polegar virado para a barriga, posicionado 2 dedos acima do umbigo (longe do osso do peito).</li>
                         <li><strong>Movimento:</strong> Puxe firme para DENTRO e para CIMA (em formato de "J").</li>
@@ -98,19 +118,19 @@
     <!-- Navegação Inferior Fixa -->
     <nav class="bottom-nav" aria-label="Navegação Principal">
         <a href="index.html" class="nav-item nav-emergency ativo">
-            <span class="nav-icon">🚨</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#siren"></use></svg></span>
             <span class="nav-label">Emergência</span>
         </a>
         <a href="../aprender/index.html" class="nav-item">
-            <span class="nav-icon">📘</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#book-open"></use></svg></span>
             <span class="nav-label">Aprender</span>
         </a>
         <a href="../pesquisa/tcle.html" class="nav-item">
-            <span class="nav-icon">✏️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#clipboard-list"></use></svg></span>
             <span class="nav-label">Treinar</span>
         </a>
         <a href="../institucional/sobre.html" class="nav-item">
-            <span class="nav-icon">ℹ️</span>
+            <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#info"></use></svg></span>
             <span class="nav-label">Mais</span>
         </a>
     </nav>
