@@ -1,0 +1,10 @@
+{
+  "name": "PROBEX - SBV Pediátrico na Escola",
+  "short_name": "SBV Pediátrico",
+  "description": "Plataforma de Suporte Básico de Vida (SBV) Pediátrico para Educadores Leigos - Projeto Extensionista PROBEX / Unit",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#B83A6B",
+  "lang": "pt-BR"
+}

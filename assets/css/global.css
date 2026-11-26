@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PROBEX - SBV PediÃ¡trico na Escola
+   PROBEX - SBV Pediátrico na Escola
    Estilos Globais & Reset Responsivo (assets/css/global.css)
    ========================================================================== */
 
@@ -33,18 +33,29 @@ body {
   overflow-x: hidden;
 }
 
-/* --- 2. Estrutura de Layout Responsivo (Mobile-First Centrado) --- */
+/* --- 2. Estrutura de Layout Responsivo (Mobile, Tablet e Desktop) --- */
 .app-header,
+.header-emergencia,
 .main-content,
 .bottom-nav {
   width: 100%;
-  max-width: var(--largura-maxima);
+}
+
+.app-header,
+.header-emergencia {
+  order: 0;
 }
 
 .main-content {
+  order: 1;
   flex: 1;
+  max-width: var(--largura-maxima);
   padding: var(--espaco-md);
-  padding-bottom: calc(var(--altura-bottom-nav) + var(--espaco-lg));
+  padding-bottom: calc(var(--altura-bottom-nav) + var(--espaco-lg) + env(safe-area-inset-bottom, 0px));
+}
+
+.bottom-nav {
+  order: 2;
 }
 
 /* --- 3. Tipografia Global & Links --- */
@@ -78,7 +89,7 @@ a:focus {
   color: var(--cor-principal-hover);
 }
 
-/* --- 4. Elementos de MÃ­dia & Form (Fluididade) --- */
+/* --- 4. Elementos de Mídia & Form (Fluididade) --- */
 img,
 svg,
 video,
@@ -109,6 +120,10 @@ button {
   outline-offset: 2px;
 }
 
+[id] {
+  scroll-margin-top: calc(var(--altura-header) + var(--espaco-md));
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -121,7 +136,21 @@ button {
   border: 0;
 }
 
-/* --- 6. UtilitÃ¡rios de Flexbox & Grid --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- 6. Utilitários de Flexbox & Grid --- */
 .flex-center {
   display: flex;
   align-items: center;
@@ -146,20 +175,29 @@ button {
 .text-center { text-align: center; }
 .font-bold { font-weight: var(--peso-bold); }
 
-/* --- 7. AdaptaÃ§Ãµes para Telas Maiores (Desktop Centrado) --- */
-@media (min-width: 641px) {
-  body {
-    background-color: #E2E8F0; /* Fundo contrastante para destacar a moldura mobile */
-  }
-
-  .app-header,
-  .main-content,
-  .bottom-nav {
-    background-color: var(--cor-fundo);
-    box-shadow: var(--sombra-md);
+/* --- 7. Adaptações para Tablet (768px - 1023px) --- */
+@media (min-width: 768px) {
+  :root {
+    --largura-maxima: var(--largura-tablet);
   }
 
   .bottom-nav {
-    border-radius: var(--raio-lg) var(--raio-lg) 0 0;
+    order: 1;
+  }
+
+  .main-content {
+    order: 2;
+    padding: var(--espaco-xl) var(--espaco-lg);
+  }
+}
+
+/* --- 8. Adaptações para Computador / Desktop (1024px+) --- */
+@media (min-width: 1024px) {
+  :root {
+    --largura-maxima: var(--largura-desktop);
+  }
+
+  .main-content {
+    padding: var(--espaco-xl);
   }
 }

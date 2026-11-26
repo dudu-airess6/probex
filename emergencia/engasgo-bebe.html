@@ -17,8 +17,14 @@
 
     <!-- Cabeçalho do Passo a Passo -->
     <header class="header-emergencia">
-        <span class="badge-emergencia-rapida">👶 BEBÊ (< 1 ANO) • ENGASGO GRAVE</span>
-        <h1>MANOBRA DE DESENGASGO</h1>
+        <div class="header-emergencia-inner">
+            <div class="header-emergencia-acoes">
+                <a href="index.html" class="btn-voltar-header">⬅️ Triagem</a>
+                <span class="badge-emergencia-rapida">👶 BEBÊ (&lt; 1 ANO) • ENGASGO GRAVE</span>
+                <a href="../index.html" class="btn-voltar-header">🏠 Início</a>
+            </div>
+            <h1>MANOBRA DE DESENGASGO</h1>
+        </div>
     </header>
 
     <main class="main-content">
@@ -28,55 +34,65 @@
             📞 <strong>PEÇA AJUDA AGORA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie as manobras imediatamente!
         </section>
 
-        <!-- CONTAINER DO PASSO A PASSO INTERATIVO -->
-        <article class="passo-card" id="passo-bebe-container">
-            
-            <header class="passo-header">
-                <span class="passo-numero" id="passo-numero-tag">PASSO 1 DE 5</span>
-                <span class="passo-total">Ciclo 5 Golpes : 5 Compressões</span>
-            </header>
+        <div class="emergencia-layout">
+            <div class="emergencia-coluna-principal">
+                <!-- CONTAINER DO PASSO A PASSO INTERATIVO -->
+                <article class="passo-card" id="passo-bebe-container" aria-live="polite">
+                    
+                    <header class="passo-header">
+                        <span class="passo-numero" id="passo-numero-tag">PASSO 1 DE 5</span>
+                        <span class="passo-total">Ciclo 5 Golpes : 5 Compressões</span>
+                    </header>
 
-            <!-- TÍTULO E INSTRUÇÃO DIRETA DO PASSO -->
-            <h2 class="passo-instrucao" id="passo-instrucao-texto">
-                1. Posicione o bebê de bruços no seu antebraço, apoiado na sua coxa. Mantenha a cabeça mais baixa que o corpo. Segure a mandíbula (queixo) em "C" sem apertar a garganta.
-            </h2>
+                    <div class="passo-progresso-barra" aria-hidden="true">
+                        <div class="passo-progresso-fill" id="passo-progresso-fill-bebe" style="width: 20%;"></div>
+                    </div>
 
-            <!-- ALERTA DE ERRO COMUM / PROIBIÇÃO -->
-            <div class="passo-alerta-grave" id="passo-alerta-especifico">
-                🚫 <strong>NUNCA:</strong> Não segure o bebê de ponta-cabeça pelas pernas e não garroteie o pescoço.
+                    <!-- TÍTULO E INSTRUÇÃO DIRETA DO PASSO -->
+                    <h2 class="passo-instrucao" id="passo-instrucao-texto">
+                        1. Posicione o bebê de bruços no seu antebraço, apoiado na sua coxa. Mantenha a cabeça mais baixa que o corpo. Segure a mandíbula (queixo) em "C" sem apertar a garganta.
+                    </h2>
+
+                    <!-- ALERTA DE ERRO COMUM / PROIBIÇÃO -->
+                    <div class="passo-alerta-grave" id="passo-alerta-especifico">
+                        <strong>🚫 NUNCA: </strong>Não segure o bebê de ponta-cabeça pelas pernas e não garroteie o pescoço.
+                    </div>
+
+                    <!-- NAVEGAÇÃO ENTRE PASSOS -->
+                    <div class="controles-passo">
+                        <button type="button" class="btn-passo btn-passo-ant" id="btn-passo-anterior" disabled>
+                            ⬅️ Voltar
+                        </button>
+                        <button type="button" class="btn-passo btn-passo-prox" id="btn-passo-proximo">
+                            Próximo Passo ➡️
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- BOTÃO DE EMERGÊNCIA SE O BEBÊ DESMAIAR -->
+                <section>
+                    <a href="rcp.html?idade=bebe" class="btn-emergency-main btn-emergency-main--compacto">
+                        <span class="btn-emergency-icon" aria-hidden="true">⚠️</span>
+                        <span class="btn-emergency-text">O BEBÊ DESMAIOU / FICOU MOLE?</span>
+                        <span class="btn-emergency-sub">Clique aqui para iniciar a RCP imediatamente</span>
+                    </a>
+                </section>
             </div>
 
-            <!-- NAVEGAÇÃO ENTRE PASSOS -->
-            <div class="controles-passo">
-                <button type="button" class="btn-passo btn-passo-ant" id="btn-passo-anterior" disabled>
-                    ⬅️ Voltar
-                </button>
-                <button type="button" class="btn-passo btn-passo-prox" id="btn-passo-proximo">
-                    Próximo Passo ➡️
-                </button>
-            </div>
-
-        </article>
-
-        <!-- BOTÃO DE EMERGÊNCIA SE O BEBÊ DESMAIAR -->
-        <section style="margin-top: var(--espaco-lg);">
-            <a href="rcp.html?idade=bebe" class="btn-emergency-main" style="padding: var(--espaco-md); min-height: auto;">
-                <span class="btn-emergency-icon" style="font-size: 1.5rem;">⚠️</span>
-                <span class="btn-emergency-text" style="font-size: 1.1rem;">O BEBÊ DESMAIOU / FICOU MOLE?</span>
-                <span class="btn-emergency-sub">Clique aqui para iniciar a RCP imediatamente</span>
-            </a>
-        </section>
-
-        <!-- AVISOS E PROIBIÇÕES CRÍTICAS (AHA 2025 / SBP) -->
-        <section class="hero-card" style="margin-top: var(--espaco-xl); background: #FFF; border-left: 4px solid var(--cor-emergencia);">
-            <h3 style="color: var(--cor-emergencia); margin-bottom: var(--espaco-sm);">🚫 O que NUNCA fazer em engasgo de bebê:</h3>
-            <ul style="padding-left: var(--espaco-lg); font-size: 0.9rem; color: var(--cor-texto-suave);">
-                <li><strong>NÃO faça compressões na barriga</strong> em bebês (risco grave de lesão de órgãos internos).</li>
-                <li><strong>NÃO enfie o dedo no fundo da boca às cegas</strong> (pode empurrar o objeto mais para o fundo).</li>
-                <li><strong>NÃO dê água, leite ou óleo.</strong></li>
-                <li><strong>NÃO use a técnica de 2 dedos</strong> nas compressões (Diretriz AHA 2025 atualizada: use a base de uma mão ou dois polegares).</li>
-            </ul>
-        </section>
+            <aside class="emergencia-coluna-apoio">
+                <!-- AVISOS E PROIBIÇÕES CRÍTICAS (AHA 2025 / SBP) -->
+                <section class="hero-card card-proibicoes">
+                    <h3>🚫 O que NUNCA fazer em engasgo de bebê:</h3>
+                    <ul class="lista-orientacoes">
+                        <li><strong>NÃO faça compressões na barriga</strong> em bebês (risco grave de lesão de órgãos internos).</li>
+                        <li><strong>NÃO enfie o dedo no fundo da boca às cegas</strong> (pode empurrar o objeto mais para o fundo).</li>
+                        <li><strong>NÃO dê água, leite ou óleo.</strong></li>
+                        <li><strong>NÃO use a técnica de 2 dedos</strong> nas compressões (Diretriz AHA 2025 atualizada: use a base de uma mão ou dois polegares).</li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
 
     </main>
 

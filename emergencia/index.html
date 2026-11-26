@@ -17,14 +17,20 @@
 
     <!-- Cabeçalho de Alerta de Emergência -->
     <header class="header-emergencia">
-        <span class="badge-emergencia-rapida">🚨 MODO DE EMERGÊNCIA • 1 TOQUE</span>
-        <h1>O QUE ESTÁ ACONTECENDO?</h1>
+        <div class="header-emergencia-inner">
+            <div class="header-emergencia-acoes">
+                <a href="../index.html" class="btn-voltar-header">🏠 Início</a>
+                <span class="badge-emergencia-rapida">🚨 MODO DE EMERGÊNCIA • 1 TOQUE</span>
+                <a href="ligar-192.html" class="btn-voltar-header">📞 192</a>
+            </div>
+            <h1>O QUE ESTÁ ACONTECENDO?</h1>
+        </div>
     </header>
 
     <main class="main-content">
 
         <!-- REGRA DE OURO (Sempre visível no topo) -->
-        <section class="passo-alerta-grave" style="margin-top: var(--espaco-sm);" role="alert">
+        <section class="passo-alerta-grave" role="alert">
             ⚡ <strong>REGRA DE OURO:</strong> Peça imediatamente para alguém <strong>LIGAR 192</strong> e buscar o <strong>DEA</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e inicie o atendimento!
         </section>
 
@@ -32,67 +38,69 @@
         <section class="triagem-container" aria-label="Seleção do tipo de ocorrência">
             
             <!-- OPÇÃO 1: ENGASGO / OVACE -->
-            <div class="card-triagem triagem-engasgo">
-                <span class="triagem-icone">🥪</span>
-                <div class="triagem-info">
-                    <h3>ESTÁ ENGASGADO(A)</h3>
-                    <p>Não consegue tossir, chorar nem falar. Lábios arroxeados ou agitação.</p>
+            <div class="triagem-coluna" id="engasgo">
+                <div class="card-triagem triagem-engasgo">
+                    <span class="triagem-icone" aria-hidden="true">🥪</span>
+                    <div class="triagem-info">
+                        <h3>ESTÁ ENGASGADO(A)</h3>
+                        <p>Não consegue tossir, chorar nem falar. Lábios arroxeados ou agitação.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- SELEÇÃO DE IDADE PARA ENGASGO -->
-            <div class="seletor-idade-grid" id="seletor-engasgo">
-                <a href="engasgo-bebe.html" class="btn-opcao-idade">
-                    <span class="idade-icone">👶</span>
-                    <span class="idade-titulo">BEBÊ</span>
-                    <span class="idade-faixa">Menos de 1 ano</span>
-                </a>
-                <a href="engasgo-crianca.html" class="btn-opcao-idade">
-                    <span class="idade-icone">🧒</span>
-                    <span class="idade-titulo">CRIANÇA</span>
-                    <span class="idade-faixa">1 ano até a puberdade</span>
-                </a>
+                <!-- SELEÇÃO DE IDADE PARA ENGASGO -->
+                <div class="seletor-idade-grid" id="seletor-engasgo">
+                    <a href="engasgo-bebe.html" class="btn-opcao-idade">
+                        <span class="idade-icone" aria-hidden="true">👶</span>
+                        <span class="idade-titulo">BEBÊ</span>
+                        <span class="idade-faixa">Menos de 1 ano</span>
+                    </a>
+                    <a href="engasgo-crianca.html" class="btn-opcao-idade">
+                        <span class="idade-icone" aria-hidden="true">🧒</span>
+                        <span class="idade-titulo">CRIANÇA</span>
+                        <span class="idade-faixa">1 ano até a puberdade</span>
+                    </a>
+                </div>
             </div>
 
             <!-- OPÇÃO 2: PARADA CARDIORRESPIRATÓRIA / PCR -->
-            <div class="card-triagem triagem-pcr" style="margin-top: var(--espaco-md);">
-                <span class="triagem-icone">🫀</span>
-                <div class="triagem-info">
-                    <h3>NÃO RESPONDE E NÃO RESPIRA</h3>
-                    <p>Desmaiado(a), inconsciente ou apenas "ofegando" (gasping).</p>
+            <div class="triagem-coluna" id="pcr">
+                <div class="card-triagem triagem-pcr">
+                    <span class="triagem-icone" aria-hidden="true">🫀</span>
+                    <div class="triagem-info">
+                        <h3>NÃO RESPONDE E NÃO RESPIRA</h3>
+                        <p>Desmaiado(a), inconsciente ou apenas "ofegando" (gasping).</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- SELEÇÃO DE IDADE PARA PCR -->
-            <div class="seletor-idade-grid" id="seletor-pcr">
-                <a href="rcp.html?idade=bebe" class="btn-opcao-idade">
-                    <span class="idade-icone">👶</span>
-                    <span class="idade-titulo">RCP BEBÊ</span>
-                    <span class="idade-faixa">Menos de 1 ano</span>
-                </a>
-                <a href="rcp.html?idade=crianca" class="btn-opcao-idade">
-                    <span class="idade-icone">🧒</span>
-                    <span class="idade-titulo">RCP CRIANÇA</span>
-                    <span class="idade-faixa">1 ano até a puberdade</span>
-                </a>
+                <!-- SELEÇÃO DE IDADE PARA PCR -->
+                <div class="seletor-idade-grid" id="seletor-pcr">
+                    <a href="rcp.html?idade=bebe" class="btn-opcao-idade">
+                        <span class="idade-icone" aria-hidden="true">👶</span>
+                        <span class="idade-titulo">RCP BEBÊ</span>
+                        <span class="idade-faixa">Menos de 1 ano</span>
+                    </a>
+                    <a href="rcp.html?idade=crianca" class="btn-opcao-idade">
+                        <span class="idade-icone" aria-hidden="true">🧒</span>
+                        <span class="idade-titulo">RCP CRIANÇA</span>
+                        <span class="idade-faixa">1 ano até a puberdade</span>
+                    </a>
+                </div>
             </div>
 
         </section>
 
         <!-- ATALHOS COMPLEMENTARES DE EMERGÊNCIA -->
-        <section style="margin-top: var(--espaco-xl);">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--espaco-md);">
-                <a href="dea.html" class="btn-passo btn-passo-ant" style="background: #FFF; border-color: var(--cor-principal); color: var(--cor-principal);">
-                    ⚡ Como Usar o DEA
-                </a>
-                <a href="ligar-192.html" class="btn-passo btn-passo-prox" style="background: var(--cor-emergencia);">
-                    📞 Ligar 192 SAMU
-                </a>
-            </div>
+        <section class="action-grid-2">
+            <a href="dea.html" class="btn-passo btn-passo-secundario">
+                ⚡ Como Usar o DEA
+            </a>
+            <a href="ligar-192.html" class="btn-passo btn-passo-prox">
+                📞 Ligar 192 SAMU
+            </a>
         </section>
 
         <!-- AVISO LEGAL PERMANENTE DE RODAPÉ -->
-        <aside class="legal-notice-banner" style="margin-top: var(--espaco-xl);" role="note">
+        <aside class="legal-notice-banner" style="margin-top: var(--espaco-lg);" role="note">
             ⚠️ <strong>Aviso:</strong> Mantenha a calma. Siga cada passo da tela. Em dúvida, inicie compressões no centro do peito.
         </aside>
 

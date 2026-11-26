@@ -17,8 +17,14 @@
 
     <!-- Cabeçalho do Passo a Passo -->
     <header class="header-emergencia">
-        <span class="badge-emergencia-rapida">🧒 CRIANÇA (≥ 1 ANO) • ENGASGO GRAVE</span>
-        <h1>MANOBRA DE HEIMLICH & GOLPES</h1>
+        <div class="header-emergencia-inner">
+            <div class="header-emergencia-acoes">
+                <a href="index.html" class="btn-voltar-header">⬅️ Triagem</a>
+                <span class="badge-emergencia-rapida">🧒 CRIANÇA (≥ 1 ANO) • ENGASGO GRAVE</span>
+                <a href="../index.html" class="btn-voltar-header">🏠 Início</a>
+            </div>
+            <h1>MANOBRA DE HEIMLICH & GOLPES</h1>
+        </div>
     </header>
 
     <main class="main-content">
@@ -28,54 +34,64 @@
             📞 <strong>PEÇA AJUDA AGORA:</strong> Mande alguém ligar <strong>192 (SAMU)</strong>. Se estiver sozinho(a), coloque o celular em <strong>VIVA-VOZ</strong> e comece o socorro!
         </section>
 
-        <!-- CONTAINER DO PASSO A PASSO INTERATIVO -->
-        <article class="passo-card" id="passo-crianca-container">
-            
-            <header class="passo-header">
-                <span class="passo-numero" id="passo-numero-tag-crianca">PASSO 1 DE 4</span>
-                <span class="passo-total">Ciclo 5 Golpes : 5 Compressões Abdominais</span>
-            </header>
+        <div class="emergencia-layout">
+            <div class="emergencia-coluna-principal">
+                <!-- CONTAINER DO PASSO A PASSO INTERATIVO -->
+                <article class="passo-card" id="passo-crianca-container" aria-live="polite">
+                    
+                    <header class="passo-header">
+                        <span class="passo-numero" id="passo-numero-tag-crianca">PASSO 1 DE 4</span>
+                        <span class="passo-total">Ciclo 5 Golpes : 5 Compressões Abdominais</span>
+                    </header>
 
-            <!-- TÍTULO E INSTRUÇÃO DIRETA -->
-            <h2 class="passo-instrucao" id="passo-instrucao-crianca">
-                1. Ajoelhe-se ou fique na altura da criança, posicione-se atrás ou ao lado dela e incline o corpo da criança levemente para a frente.
-            </h2>
+                    <div class="passo-progresso-barra" aria-hidden="true">
+                        <div class="passo-progresso-fill" id="passo-progresso-fill-crianca" style="width: 25%;"></div>
+                    </div>
 
-            <!-- ALERTA DE ERRO COMUM / PROIBIÇÃO -->
-            <div class="passo-alerta-grave" id="passo-alerta-crianca">
-                🚫 <strong>ATENÇÃO:</strong> Se a criança estiver tossindo com força ou falando (engasgo leve), NÃO faça as manobras. Apenas incentive a tosse!
+                    <!-- TÍTULO E INSTRUÇÃO DIRETA -->
+                    <h2 class="passo-instrucao" id="passo-instrucao-crianca">
+                        1. Ajoelhe-se ou fique na altura da criança, posicione-se atrás ou ao lado dela e incline o corpo da criança levemente para a frente.
+                    </h2>
+
+                    <!-- ALERTA DE ERRO COMUM / PROIBIÇÃO -->
+                    <div class="passo-alerta-grave" id="passo-alerta-crianca">
+                        <strong>🚫 ATENÇÃO: </strong>Se a criança estiver tossindo com força ou falando (engasgo leve), apenas incentive a tosse!
+                    </div>
+
+                    <!-- NAVEGAÇÃO ENTRE PASSOS -->
+                    <div class="controles-passo">
+                        <button type="button" class="btn-passo btn-passo-ant" id="btn-passo-ant-crianca" disabled>
+                            ⬅️ Voltar
+                        </button>
+                        <button type="button" class="btn-passo btn-passo-prox" id="btn-passo-prox-crianca">
+                            Próximo Passo ➡️
+                        </button>
+                    </div>
+
+                </article>
+
+                <!-- BOTÃO DE EMERGÊNCIA SE A CRIANÇA DESMAIAR -->
+                <section>
+                    <a href="rcp.html?idade=crianca" class="btn-emergency-main btn-emergency-main--compacto">
+                        <span class="btn-emergency-icon" aria-hidden="true">⚠️</span>
+                        <span class="btn-emergency-text">A CRIANÇA DESMAIOU / FICOU INCONSCIENTE?</span>
+                        <span class="btn-emergency-sub">Clique aqui para iniciar a RCP imediatamente</span>
+                    </a>
+                </section>
             </div>
 
-            <!-- NAVEGAÇÃO ENTRE PASSOS -->
-            <div class="controles-passo">
-                <button type="button" class="btn-passo btn-passo-ant" id="btn-passo-ant-crianca" disabled>
-                    ⬅️ Voltar
-                </button>
-                <button type="button" class="btn-passo btn-passo-prox" id="btn-passo-prox-crianca">
-                    Próximo Passo ➡️
-                </button>
-            </div>
-
-        </article>
-
-        <!-- BOTÃO DE EMERGÊNCIA SE A CRIANÇA DESMAIAR -->
-        <section style="margin-top: var(--espaco-lg);">
-            <a href="rcp.html?idade=crianca" class="btn-emergency-main" style="padding: var(--espaco-md); min-height: auto;">
-                <span class="btn-emergency-icon" style="font-size: 1.5rem;">⚠️</span>
-                <span class="btn-emergency-text" style="font-size: 1.1rem;">A CRIANÇA DESMAIOU / FICOU INCONSCIENTE?</span>
-                <span class="btn-emergency-sub">Clique aqui para iniciar a RCP imediatamente</span>
-            </a>
-        </section>
-
-        <!-- DICAS E RECOMENDAÇÕES (AHA 2025 / SBP) -->
-        <section class="hero-card" style="margin-top: var(--espaco-xl); background: #FFF; border-left: 4px solid var(--cor-principal);">
-            <h3 style="color: var(--cor-principal); margin-bottom: var(--espaco-sm);">💡 Orientações Importantes:</h3>
-            <ul style="padding-left: var(--espaco-lg); font-size: 0.9rem; color: var(--cor-texto-suave);">
-                <li><strong>Posição da mão na compressão abdominal:</strong> Punho fechado com o polegar virado para a barriga, posicionado 2 dedos acima do umbigo (longe do osso do peito).</li>
-                <li><strong>Movimento:</strong> Puxe firme para DENTRO e para CIMA (em formato de "J").</li>
-                <li><strong>Após desobstruir:</strong> Mesmo que o objeto saia, encaminhe a criança para avaliação médica no serviço de saúde para descartar lesões viscerais.</li>
-            </ul>
-        </section>
+            <aside class="emergencia-coluna-apoio">
+                <!-- DICAS E RECOMENDAÇÕES (AHA 2025 / SBP) -->
+                <section class="hero-card card-orientacoes">
+                    <h3>💡 Orientações Importantes:</h3>
+                    <ul class="lista-orientacoes">
+                        <li><strong>Posição da mão na compressão abdominal:</strong> Punho fechado com o polegar virado para a barriga, posicionado 2 dedos acima do umbigo (longe do osso do peito).</li>
+                        <li><strong>Movimento:</strong> Puxe firme para DENTRO e para CIMA (em formato de "J").</li>
+                        <li><strong>Após desobstruir:</strong> Mesmo que o objeto saia, encaminhe a criança para avaliação médica no serviço de saúde para descartar lesões viscerais.</li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
 
     </main>
 

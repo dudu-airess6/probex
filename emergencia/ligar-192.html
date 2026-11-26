@@ -17,65 +17,75 @@
 
     <!-- Cabeçalho de Emergência -->
     <header class="header-emergencia">
-        <span class="badge-emergencia-rapida">🚑 SERVIÇO DE ATENDIMENTO MÓVEL</span>
-        <h1>ACIONAR O SAMU 192</h1>
+        <div class="header-emergencia-inner">
+            <div class="header-emergencia-acoes">
+                <a href="index.html" class="btn-voltar-header">⬅️ Triagem</a>
+                <span class="badge-emergencia-rapida">🚑 SERVIÇO DE ATENDIMENTO MÓVEL</span>
+                <a href="../index.html" class="btn-voltar-header">🏠 Início</a>
+            </div>
+            <h1>ACIONAR O SAMU 192</h1>
+        </div>
     </header>
 
     <main class="main-content">
 
         <!-- BOTÃO DIRETO DE DISCAGEM -->
-        <section class="samu-call-section" style="margin-top: var(--espaco-sm);">
-            <a href="tel:192" class="btn-samu-banner" style="background: var(--cor-emergencia); box-shadow: var(--sombra-emergencia); padding: var(--espaco-lg);">
-                <span class="samu-icon" style="font-size: 2.5rem;">📞</span>
+        <section class="samu-call-section">
+            <a href="tel:192" class="btn-samu-banner btn-samu-destaque">
+                <span class="samu-icon" aria-hidden="true">📞</span>
                 <div class="samu-text">
-                    <strong style="font-size: 1.5rem;">TOQUE PARA LIGAR 192</strong>
-                    <span style="color: #FFF;">Atendimento Gratuito 24h (SAMU)</span>
+                    <strong>TOQUE PARA LIGAR 192</strong>
+                    <span>Atendimento Gratuito 24h (SAMU)</span>
                 </div>
             </a>
         </section>
 
-        <!-- ROTEIRO DE FALA PARA O PROFESSOR / CUIDADOR -->
-        <article class="passo-card" style="margin-top: var(--espaco-lg);">
-            
-            <header class="passo-header">
-                <span class="passo-numero">ROTEIRO DE FALA</span>
-                <span class="passo-total">O que dizer ao atendente do 192</span>
-            </header>
+        <div class="emergencia-layout" style="margin-top: var(--espaco-lg);">
+            <!-- ROTEIRO DE FALA PARA O PROFESSOR / CUIDADOR -->
+            <article class="passo-card">
+                
+                <header class="passo-header">
+                    <span class="passo-numero">ROTEIRO DE FALA</span>
+                    <span class="passo-total">O que dizer ao atendente do 192</span>
+                </header>
 
-            <h2 class="passo-instrucao" style="color: var(--cor-principal-hover);">
-                1. "Preciso de socorro urgente! Uma criança [ENGASGOU GRAVE / NÃO RESPONDE E NÃO RESPIRA]."
-            </h2>
+                <ol class="lista-passos">
+                    <li class="passo-destaque-fala">
+                        1. "Preciso de socorro urgente! Uma criança [ENGASGOU GRAVE / NÃO RESPONDE E NÃO RESPIRA]."
+                    </li>
+                    <li>
+                        2. Informe a idade aproximada: <em>"É um bebê de __ meses"</em> ou <em>"Uma criança de __ anos"</em>.
+                    </li>
+                    <li>
+                        3. Ligue o <strong>VIVA-VOZ</strong> do celular e siga as orientações do médico regulador por telefone enquanto mantém o socorro.
+                    </li>
+                </ol>
 
-            <div style="background: var(--cor-destaque); border-left: 4px solid var(--cor-destaque-texto); padding: var(--espaco-md); border-radius: var(--raio-md); margin-bottom: var(--espaco-md);">
-                📍 <strong>ENDEREÇO DA ESCOLA (LEIA PARA O ATENDENTE):</strong><br>
-                <strong>EMEI Professora Joana Maria da Silva</strong><br>
-                Rua Carlos Gomes, nº 180, Bairro Farolândia<br>
-                Aracaju - SE
-            </div>
+                <div class="passo-alerta-grave">
+                    🛑 <strong>NUNCA DESLIGUE A LIGAÇÃO</strong> antes do atendente autorizar!
+                </div>
 
-            <h2 class="passo-instrucao">
-                2. Informe a idade aproximada: <em>"É um bebê de __ meses"</em> ou <em>"Uma criança de __ anos"</em>.
-            </h2>
+            </article>
 
-            <h2 class="passo-instrucao">
-                3. Ligue o <strong>VIVA-VOZ</strong> do celular e siga as orientações do médico regulador por telefone enquanto mantém o socorro.
-            </h2>
+            <aside class="emergencia-coluna-apoio">
+                <div class="card-escola-destaque">
+                    📍 <strong>ENDEREÇO DA ESCOLA (LEIA PARA O ATENDENTE):</strong><br>
+                    <strong>EMEI Professora Joana Maria da Silva</strong><br>
+                    Rua Carlos Gomes, nº 180, Bairro Farolândia<br>
+                    Aracaju - SE
+                </div>
 
-            <div class="passo-alerta-grave">
-                🛑 <strong>NUNCA DESLIGUE A LIGAÇÃO</strong> antes do atendente autorizar!
-            </div>
-
-        </article>
-
-        <!-- OUTROS NÚMEROS ÚTEIS -->
-        <section style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--espaco-md); margin-top: var(--espaco-md);">
-            <a href="tel:193" class="btn-passo btn-passo-ant" style="background: #FFF; border-color: var(--cor-emergencia); color: var(--cor-emergencia);">
-                🚒 193 Bombeiros
-            </a>
-            <a href="index.html" class="btn-passo btn-passo-prox">
-                ⬅️ Voltar à Triagem
-            </a>
-        </section>
+                <!-- OUTROS NÚMEROS ÚTEIS -->
+                <section class="action-grid-2" style="margin-top: 0;">
+                    <a href="tel:193" class="btn-passo btn-passo-bombeiros">
+                        🚒 193 Bombeiros
+                    </a>
+                    <a href="index.html" class="btn-passo btn-passo-prox">
+                        ⬅️ Voltar à Triagem
+                    </a>
+                </section>
+            </aside>
+        </div>
 
     </main>
 

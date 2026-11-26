@@ -1,9 +1,26 @@
 /* ==========================================================================
-   PROBEX - SBV PediÃ¡trico na Escola
+   PROBEX - SBV Pediátrico na Escola
    Estilos de Componentes da Interface (assets/css/componentes.css)
    ========================================================================== */
 
-/* --- 1. CabeÃ§alho Institucional (.app-header) --- */
+/* --- 1. Cabeçalho Institucional (.app-header) --- */
+.skip-link {
+  position: fixed;
+  top: var(--espaco-sm);
+  left: var(--espaco-sm);
+  z-index: 101;
+  padding: var(--espaco-sm) var(--espaco-md);
+  border-radius: var(--raio-md);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  box-shadow: var(--sombra-md);
+  transform: translateY(calc(-100% - var(--espaco-md)));
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .app-header {
   position: sticky;
   top: 0;
@@ -15,14 +32,19 @@
 }
 
 .header-content {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--espaco-sm);
 }
 
 .brand-info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .badge-unit {
@@ -46,7 +68,7 @@
 
 .app-subtitle {
   font-size: var(--tamanho-fonte-xs);
-  opacity: 0.9;
+  opacity: 0.95;
   margin: 0;
   color: var(--cor-destaque);
 }
@@ -62,6 +84,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--espaco-xs);
+  flex-shrink: 0;
+  white-space: nowrap;
   transition: transform var(--transicao-rapida), background-color var(--transicao-rapida);
 }
 
@@ -72,13 +96,44 @@
   transform: scale(1.05);
 }
 
-/* --- 2. Card de Boas-Vindas / Hero (.hero-card) --- */
+/* --- 2. Layout Principal da Home --- */
+.home-top-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-lg);
+}
+
+.home-side-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+}
+
+.home-container .hero-card {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-container .hero-title {
+  color: var(--cor-texto);
+  font-size: var(--tamanho-fonte-2xl);
+}
+
+.home-container .hero-text {
+  font-size: var(--tamanho-fonte-md);
+  line-height: 1.6;
+}
+
+/* --- 3. Card de Boas-Vindas / Hero (.hero-card) --- */
 .hero-card {
   background-color: var(--cor-superficie);
   border-left: 4px solid var(--cor-principal);
   border-radius: var(--raio-md);
   padding: var(--espaco-md);
-  margin-bottom: var(--espaco-md);
   box-shadow: var(--sombra-sm);
 }
 
@@ -91,12 +146,14 @@
 .hero-text {
   font-size: var(--tamanho-fonte-sm);
   color: var(--cor-texto-suave);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-/* --- 3. AÃ§Ã£o Principal de EmergÃªncia (.btn-emergency-main) --- */
+/* --- 4. Ação Principal de Emergência (.btn-emergency-main) --- */
 .emergency-action-section {
-  margin-bottom: var(--espaco-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
 }
 
 .btn-emergency-main {
@@ -125,6 +182,18 @@
   color: var(--cor-texto-inverso);
 }
 
+.btn-emergency-main--compacto {
+  padding: var(--espaco-md);
+}
+
+.btn-emergency-main--compacto .btn-emergency-icon {
+  font-size: 1.5rem;
+}
+
+.btn-emergency-main--compacto .btn-emergency-text {
+  font-size: 1.1rem;
+}
+
 .btn-emergency-icon {
   font-size: 2.5rem;
   margin-bottom: var(--espaco-xs);
@@ -133,7 +202,7 @@
 
 @keyframes pulse-icon {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+  50% { transform: scale(1.12); }
 }
 
 .btn-emergency-text {
@@ -154,12 +223,39 @@
   border-radius: var(--raio-full);
 }
 
-/* --- 4. Atalhos RÃ¡pidos (.quick-shortcuts-grid) --- */
+.home-container .btn-emergency-main {
+  min-height: 8.5rem;
+  padding: var(--espaco-lg);
+  border: 0;
+  border-radius: var(--raio-lg);
+  background: var(--cor-emergencia);
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16);
+  transition: background-color var(--transicao-rapida);
+}
+
+.home-container .btn-emergency-main:hover,
+.home-container .btn-emergency-main:focus-visible {
+  transform: none;
+  background: var(--cor-emergencia-hover);
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16);
+}
+
+.home-container .btn-emergency-icon {
+  font-size: 2rem;
+  animation: none;
+}
+
+.home-container .btn-emergency-sub {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* --- 5. Atalhos Rápidos (.quick-shortcuts-grid) --- */
 .quick-shortcuts-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--espaco-md);
-  margin-top: var(--espaco-md);
 }
 
 .shortcut-card {
@@ -173,6 +269,7 @@
   box-shadow: var(--sombra-sm);
   transition: transform var(--transicao-rapida), border-color var(--transicao-rapida);
   text-decoration: none;
+  min-width: 0;
 }
 
 .shortcut-card:hover,
@@ -189,6 +286,7 @@
 .shortcut-info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .shortcut-info strong {
@@ -206,9 +304,9 @@
 .shortcut-engasgo { border-left: 4px solid #F59E0B; }
 .shortcut-pcr { border-left: 4px solid var(--cor-emergencia); }
 
-/* --- 5. Banner de LigaÃ§Ã£o SAMU (.samu-call-section) --- */
+/* --- 6. Banner de Ligação SAMU (.samu-call-section) --- */
 .samu-call-section {
-  margin-bottom: var(--espaco-lg);
+  margin-bottom: var(--espaco-md);
 }
 
 .btn-samu-banner {
@@ -220,16 +318,18 @@
   padding: var(--espaco-md);
   border-radius: var(--raio-lg);
   text-decoration: none;
-  transition: background-color var(--transicao-rapida);
+  transition: background-color var(--transicao-rapida), transform var(--transicao-rapida);
 }
 
 .btn-samu-banner:hover,
 .btn-samu-banner:focus {
   background-color: #FEE2E2;
+  transform: translateY(-1px);
 }
 
 .samu-icon {
   font-size: 2rem;
+  flex-shrink: 0;
 }
 
 .samu-text {
@@ -248,7 +348,7 @@
   color: var(--cor-texto-suave);
 }
 
-/* --- 6. Grid de MÃ³dulos da Home (.modules-grid) --- */
+/* --- 7. Grid de Módulos da Home (.modules-grid) --- */
 .home-modules-section {
   margin-bottom: var(--espaco-lg);
 }
@@ -262,8 +362,8 @@
 }
 
 .modules-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--espaco-md);
 }
 
@@ -278,6 +378,12 @@
   box-shadow: var(--sombra-sm);
   transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida);
   text-decoration: none;
+  height: 100%;
+}
+
+.home-container .shortcut-card,
+.home-container .module-card {
+  box-shadow: none;
 }
 
 .module-card:hover,
@@ -322,31 +428,42 @@
   font-size: var(--tamanho-fonte-xs);
   color: var(--cor-texto-suave);
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
-/* --- 7. Aviso Legal (.legal-notice-banner) --- */
+/* --- 8. Grade Responsiva Genérica de 2 Botões (.action-grid-2) --- */
+.action-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--espaco-md);
+  margin-top: var(--espaco-lg);
+}
+
+/* --- 9. Aviso Legal (.legal-notice-banner) --- */
 .legal-notice-banner {
   background-color: var(--cor-destaque);
   color: var(--cor-destaque-texto);
   font-size: var(--tamanho-fonte-xs);
   padding: var(--espaco-md);
   border-radius: var(--raio-md);
-  line-height: 1.4;
+  line-height: 1.5;
   border-left: 4px solid var(--cor-destaque-texto);
   margin-bottom: var(--espaco-md);
 }
 
-/* --- 8. NavegaÃ§Ã£o Inferior Fixa (.bottom-nav) --- */
+/* --- 10. Navegação Responsiva (.bottom-nav) --- */
 .bottom-nav {
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background-color: var(--cor-superficie);
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: var(--altura-bottom-nav);
+  min-height: var(--altura-bottom-nav);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   border-top: 1px solid var(--cor-borda);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -361,9 +478,10 @@
   text-decoration: none;
   font-size: var(--tamanho-fonte-xs);
   font-weight: var(--peso-semibold);
-  width: 25%;
-  height: 100%;
-  transition: color var(--transicao-rapida);
+  flex: 1;
+  min-height: var(--altura-bottom-nav);
+  padding: var(--espaco-xs);
+  transition: color var(--transicao-rapida), background-color var(--transicao-rapida);
 }
 
 .nav-icon {
@@ -371,12 +489,13 @@
 }
 
 .nav-label {
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .nav-item:hover,
 .nav-item:focus,
-.nav-item.active {
+.nav-item.active,
+.nav-item.ativo {
   color: var(--cor-principal);
 }
 
@@ -386,6 +505,122 @@
 
 .nav-emergency:hover,
 .nav-emergency:focus,
-.nav-emergency.active {
+.nav-emergency.active,
+.nav-emergency.ativo {
   color: var(--cor-emergencia-hover);
+}
+
+/* --- 11. Responsividade Celular Pequeno (<= 380px) --- */
+@media (max-width: 380px) {
+  .quick-shortcuts-grid,
+  .action-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .app-title {
+    font-size: var(--tamanho-fonte-md);
+  }
+}
+
+/* --- 12. Responsividade Tablet (640px - 1023px) --- */
+@media (min-width: 640px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .app-header {
+    padding: var(--espaco-md) var(--espaco-lg);
+  }
+
+  .app-title {
+    font-size: var(--tamanho-fonte-xl);
+  }
+
+  .bottom-nav {
+    position: static;
+    border-top: none;
+    border-bottom: 1px solid var(--cor-borda);
+    box-shadow: var(--sombra-sm);
+    min-height: 52px;
+    padding: 0 var(--espaco-lg);
+    justify-content: center;
+    gap: var(--espaco-sm);
+  }
+
+  .nav-item {
+    flex: 0 1 auto;
+    flex-direction: row;
+    gap: var(--espaco-xs);
+    min-height: 44px;
+    padding: var(--espaco-sm) var(--espaco-md);
+    border-radius: var(--raio-full);
+    font-size: var(--tamanho-fonte-sm);
+  }
+
+  .nav-item:hover,
+  .nav-item:focus,
+  .nav-item.active,
+  .nav-item.ativo {
+    background-color: var(--cor-principal-leve);
+  }
+
+  .nav-emergency.active,
+  .nav-emergency.ativo,
+  .nav-emergency:hover,
+  .nav-emergency:focus {
+    background-color: var(--cor-emergencia-leve);
+  }
+
+  .home-top-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.95fr;
+    align-items: start;
+    gap: var(--espaco-lg);
+  }
+
+  .samu-call-section {
+    margin-bottom: 0;
+  }
+}
+
+/* --- 13. Responsividade Computador / Desktop (1024px+) --- */
+@media (min-width: 1024px) {
+  .app-header {
+    padding: var(--espaco-md) var(--espaco-xl);
+  }
+
+  .home-top-grid {
+    grid-template-columns: 1.35fr 1fr;
+    gap: var(--espaco-xl);
+  }
+
+  .btn-emergency-main {
+    padding: var(--espaco-xl) var(--espaco-lg);
+  }
+
+  .modules-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--espaco-lg);
+  }
+
+  .module-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--espaco-lg);
+  }
+
+  .module-body h4 {
+    font-size: var(--tamanho-fonte-lg);
+    margin-bottom: var(--espaco-xs);
+  }
+
+  .module-body p {
+    font-size: var(--tamanho-fonte-sm);
+  }
+
+  .legal-notice-banner {
+    font-size: var(--tamanho-fonte-sm);
+  }
 }

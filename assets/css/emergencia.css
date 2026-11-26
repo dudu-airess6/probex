@@ -1,9 +1,9 @@
 /* ==========================================================================
-   PROBEX - SBV PediÃ¡trico na Escola
-   Estilos Exclusivos do Modo EmergÃªncia (assets/css/emergencia.css)
+   PROBEX - SBV Pediátrico na Escola
+   Estilos Exclusivos do Modo Emergência (assets/css/emergencia.css)
    ========================================================================== */
 
-/* --- 1. Tema de EmergÃªncia (Alto Contraste) --- */
+/* --- 1. Tema de Emergência (Alto Contraste) --- */
 body.modo-emergencia {
   background-color: var(--cor-emergencia-leve);
   color: var(--cor-texto);
@@ -13,19 +13,57 @@ body.modo-emergencia {
 .header-emergencia {
   background-color: var(--cor-emergencia);
   color: var(--cor-texto-inverso);
-  padding: var(--espaco-md);
-  text-align: center;
+  padding: var(--espaco-sm) var(--espaco-md) var(--espaco-md);
   box-shadow: var(--sombra-md);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
+.header-emergencia-inner {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--espaco-xs);
+}
+
+.header-emergencia-acoes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-sm);
+}
+
+.btn-voltar-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--cor-texto-inverso);
+  background-color: rgba(0, 0, 0, 0.22);
+  font-size: var(--tamanho-fonte-xs);
+  font-weight: var(--peso-bold);
+  padding: 5px 10px;
+  border-radius: var(--raio-full);
+  white-space: nowrap;
+  transition: background-color var(--transicao-rapida);
+}
+
+.btn-voltar-header:hover,
+.btn-voltar-header:focus {
+  background-color: rgba(0, 0, 0, 0.38);
+  color: var(--cor-texto-inverso);
+}
+
 .header-emergencia h1 {
   font-family: var(--fonte-emergencia);
   font-size: var(--tamanho-fonte-xl);
   font-weight: var(--peso-extrabold);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   color: var(--cor-texto-inverso);
 }
 
@@ -37,17 +75,21 @@ body.modo-emergencia {
   font-weight: var(--peso-bold);
   padding: var(--espaco-xs) var(--espaco-sm);
   border-radius: var(--raio-full);
-  margin-bottom: var(--espaco-xs);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-/* --- 2. Triagem de EmergÃªncia (Engasgo vs PCR) --- */
+/* --- 2. Triagem de Emergência (Engasgo vs PCR) --- */
 .triagem-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-lg);
+  margin-top: var(--espaco-md);
+}
+
+.triagem-coluna {
   display: flex;
   flex-direction: column;
-  gap: var(--espaco-md);
-  margin-top: var(--espaco-md);
 }
 
 .triagem-titulo {
@@ -85,7 +127,7 @@ body.modo-emergencia {
 }
 
 .card-triagem.triagem-engasgo {
-  border-color: #EAB308; /* Amarelo alerta engasgo */
+  border-color: #EAB308;
   background-color: #FEFCE8;
 }
 
@@ -112,10 +154,10 @@ body.modo-emergencia {
   margin-bottom: 0;
 }
 
-/* --- 3. SeleÃ§Ã£o de Faixa EtÃ¡ria (BebÃª vs CrianÃ§a) --- */
+/* --- 3. Seleção de Faixa Etária (Bebê vs Criança) --- */
 .seletor-idade-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--espaco-md);
   margin-top: var(--espaco-md);
 }
@@ -129,12 +171,15 @@ body.modo-emergencia {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--espaco-xs);
   cursor: pointer;
+  color: var(--cor-texto);
   transition: all var(--transicao-rapida);
 }
 
 .btn-opcao-idade:hover,
+.btn-opcao-idade:focus-visible,
 .btn-opcao-idade.ativo {
   background-color: var(--cor-principal);
   color: var(--cor-texto-inverso);
@@ -154,20 +199,37 @@ body.modo-emergencia {
   font-size: var(--tamanho-fonte-xs);
 }
 
-/* --- 4. Cards de Passo a Passo (Manobras Socorro) --- */
+/* --- 4. Grids Responsivos das Páginas de Atendimento --- */
+.emergencia-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-lg);
+  align-items: start;
+}
+
+.emergencia-coluna-principal,
+.emergencia-coluna-apoio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  min-width: 0;
+}
+
+/* --- 5. Cards de Passo a Passo (Manobras Socorro) --- */
 .passo-card {
   background-color: var(--cor-superficie);
   border: 2px solid var(--cor-emergencia);
   border-radius: var(--raio-xl);
   padding: var(--espaco-lg);
   box-shadow: var(--sombra-lg);
-  margin-bottom: var(--espaco-lg);
 }
 
 .passo-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: var(--espaco-sm);
   margin-bottom: var(--espaco-md);
   padding-bottom: var(--espaco-sm);
   border-bottom: 2px solid var(--cor-borda);
@@ -177,7 +239,7 @@ body.modo-emergencia {
   background-color: var(--cor-emergencia);
   color: var(--cor-texto-inverso);
   font-family: var(--fonte-emergencia);
-  font-size: var(--tamanho-fonte-lg);
+  font-size: var(--tamanho-fonte-md);
   font-weight: var(--peso-extrabold);
   padding: var(--espaco-xs) var(--espaco-md);
   border-radius: var(--raio-full);
@@ -187,6 +249,22 @@ body.modo-emergencia {
   font-size: var(--tamanho-fonte-sm);
   color: var(--cor-texto-suave);
   font-weight: var(--peso-bold);
+}
+
+.passo-progresso-barra {
+  width: 100%;
+  height: 8px;
+  background-color: var(--cor-borda);
+  border-radius: var(--raio-full);
+  overflow: hidden;
+  margin-bottom: var(--espaco-md);
+}
+
+.passo-progresso-fill {
+  height: 100%;
+  background-color: var(--cor-emergencia);
+  border-radius: var(--raio-full);
+  transition: width var(--transicao-padrao);
 }
 
 .passo-midia {
@@ -202,7 +280,7 @@ body.modo-emergencia {
   font-family: var(--fonte-emergencia);
   font-size: var(--tamanho-fonte-lg);
   font-weight: var(--peso-bold);
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--cor-texto);
   margin-bottom: var(--espaco-md);
 }
@@ -218,30 +296,148 @@ body.modo-emergencia {
   margin-bottom: var(--espaco-md);
 }
 
-/* --- 5. MetrÃ´nomo de RCP (100 a 120 BPM) --- */
+.passo-alerta-info {
+  background-color: #EFF6FF;
+  border-left: 4px solid var(--cor-principal);
+  color: var(--cor-texto);
+}
+
+.lista-passos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+}
+
+.lista-passos li {
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-lg);
+  line-height: 1.45;
+  color: var(--cor-texto);
+}
+
+.lista-passos .passo-destaque-fala {
+  color: var(--cor-principal-hover);
+  font-weight: var(--peso-bold);
+}
+
+.dica-revezamento {
+  background-color: var(--cor-fundo-alt);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-md);
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto);
+}
+
+.card-proibicoes {
+  background-color: var(--cor-superficie);
+  border-left: 4px solid var(--cor-emergencia);
+}
+
+.card-proibicoes h3 {
+  color: var(--cor-emergencia);
+  margin-bottom: var(--espaco-sm);
+}
+
+.card-orientacoes {
+  background-color: var(--cor-superficie);
+  border-left: 4px solid var(--cor-principal);
+}
+
+.card-orientacoes h3 {
+  color: var(--cor-principal);
+  margin-bottom: var(--espaco-sm);
+}
+
+.lista-orientacoes {
+  padding-left: var(--espaco-lg);
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto-suave);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-xs);
+}
+
+.card-escola-destaque {
+  background-color: var(--cor-destaque);
+  border-left: 4px solid var(--cor-destaque-texto);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-md);
+  color: var(--cor-texto);
+  font-size: var(--tamanho-fonte-sm);
+  line-height: 1.5;
+}
+
+.card-dea-local {
+  background-color: var(--cor-superficie);
+  border: 2px solid var(--cor-destaque-texto);
+  border-left: 4px solid var(--cor-destaque-texto);
+}
+
+.card-dea-local h3 {
+  color: var(--cor-destaque-texto);
+  margin-bottom: var(--espaco-xs);
+}
+
+.card-dea-local p {
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto);
+}
+
+/* Botão SAMU destaque vermelho com texto branco legível */
+.btn-samu-destaque {
+  background-color: var(--cor-emergencia);
+  border-color: var(--cor-emergencia-hover);
+  box-shadow: var(--sombra-emergencia);
+  padding: var(--espaco-lg);
+  color: var(--cor-texto-inverso);
+}
+
+.btn-samu-destaque:hover,
+.btn-samu-destaque:focus {
+  background-color: var(--cor-emergencia-hover);
+  color: var(--cor-texto-inverso);
+}
+
+.btn-samu-destaque .samu-icon {
+  font-size: 2.5rem;
+}
+
+.btn-samu-destaque .samu-text strong {
+  font-size: var(--tamanho-fonte-2xl);
+  color: var(--cor-texto-inverso);
+}
+
+.btn-samu-destaque .samu-text span {
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto-inverso-suave);
+}
+
+/* --- 6. Metrônomo de RCP (100 a 120 BPM) --- */
 .metronomo-box {
   background-color: var(--cor-texto);
   color: var(--cor-texto-inverso);
   border-radius: var(--raio-lg);
-  padding: var(--espaco-md);
+  padding: var(--espaco-lg) var(--espaco-md);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--espaco-sm);
-  margin-bottom: var(--espaco-md);
+  box-shadow: var(--sombra-md);
 }
 
 .metronomo-pulso {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background-color: var(--cor-emergencia);
   box-shadow: 0 0 0 rgba(220, 38, 38, 0.4);
 }
 
 .metronomo-pulso.pulsando {
-  animation: pulsoMetronomo 0.55s infinite alternate;
+  animation: pulsoMetronomo 0.545s infinite alternate;
 }
 
 @keyframes pulsoMetronomo {
@@ -262,15 +458,46 @@ body.modo-emergencia {
   color: var(--cor-destaque);
 }
 
-/* --- 6. BotÃµes de AÃ§Ã£o Imediata e NavegaÃ§Ã£o PrÃ³ximo/Anterior --- */
+.metronomo-descricao {
+  font-size: var(--tamanho-fonte-sm);
+  color: var(--cor-texto-inverso-suave);
+  max-width: 34ch;
+}
+
+.btn-metronomo-audio {
+  padding: var(--espaco-sm) var(--espaco-md);
+  font-family: var(--fonte-emergencia);
+  font-size: var(--tamanho-fonte-sm);
+  font-weight: var(--peso-bold);
+  border-radius: var(--raio-full);
+  background-color: var(--cor-fundo-alt);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-borda-forte);
+  min-height: 44px;
+  transition: background-color var(--transicao-rapida), color var(--transicao-rapida), border-color var(--transicao-rapida);
+}
+
+.btn-metronomo-audio:hover,
+.btn-metronomo-audio:focus-visible {
+  background-color: #E2E8F0;
+}
+
+.btn-metronomo-audio.ativo {
+  background-color: var(--cor-suporte);
+  color: var(--cor-texto-inverso);
+  border-color: var(--cor-suporte-hover);
+}
+
+/* --- 7. Botões de Ação Imediata e Navegação Próximo/Anterior --- */
 .controles-passo {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--espaco-md);
   margin-top: var(--espaco-md);
 }
 
 .btn-passo {
-  flex: 1;
+  flex: 1 1 160px;
   padding: var(--espaco-md);
   font-family: var(--fonte-emergencia);
   font-size: var(--tamanho-fonte-lg);
@@ -282,6 +509,12 @@ body.modo-emergencia {
   justify-content: center;
   gap: var(--espaco-xs);
   min-height: 54px;
+  transition: transform var(--transicao-rapida), background-color var(--transicao-rapida), opacity var(--transicao-rapida);
+}
+
+.btn-passo:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .btn-passo-ant {
@@ -290,12 +523,96 @@ body.modo-emergencia {
   border: 2px solid var(--cor-borda-forte);
 }
 
+.btn-passo-ant:not(:disabled):hover,
+.btn-passo-ant:not(:disabled):focus-visible {
+  background-color: #E2E8F0;
+}
+
+.btn-passo-secundario {
+  background-color: var(--cor-superficie);
+  color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+}
+
+.btn-passo-secundario:hover,
+.btn-passo-secundario:focus-visible {
+  background-color: var(--cor-principal-leve);
+  color: var(--cor-principal-hover);
+}
+
+.btn-passo-bombeiros {
+  background-color: var(--cor-superficie);
+  color: var(--cor-emergencia);
+  border: 2px solid var(--cor-emergencia);
+}
+
+.btn-passo-bombeiros:hover,
+.btn-passo-bombeiros:focus-visible {
+  background-color: var(--cor-emergencia-leve);
+  color: var(--cor-emergencia-hover);
+}
+
 .btn-passo-prox {
   background-color: var(--cor-emergencia);
   color: var(--cor-texto-inverso);
   box-shadow: var(--sombra-emergencia);
 }
 
-.btn-passo-prox:hover {
+.btn-passo-prox:hover,
+.btn-passo-prox:focus-visible {
   background-color: var(--cor-emergencia-hover);
+  color: var(--cor-texto-inverso);
+}
+
+/* --- 8. Responsividade Celular Pequeno (<= 380px) --- */
+@media (max-width: 380px) {
+  .seletor-idade-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-triagem {
+    padding: var(--espaco-md);
+  }
+
+  .passo-card {
+    padding: var(--espaco-md);
+  }
+}
+
+/* --- 9. Responsividade Tablet (768px+) --- */
+@media (min-width: 768px) {
+  .header-emergencia {
+    padding: var(--espaco-md) var(--espaco-lg);
+  }
+
+  .header-emergencia h1 {
+    font-size: var(--tamanho-fonte-2xl);
+  }
+
+  .triagem-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espaco-lg);
+    align-items: start;
+  }
+
+  .card-triagem {
+    min-height: 120px;
+  }
+}
+
+/* --- 10. Responsividade Computador / Desktop (960px+) --- */
+@media (min-width: 960px) {
+  .emergencia-layout {
+    grid-template-columns: 1.35fr 0.95fr;
+    gap: var(--espaco-xl);
+  }
+
+  .emergencia-layout--rcp {
+    grid-template-columns: 0.9fr 1.35fr;
+  }
+
+  .emergencia-layout--rcp .metronomo-box {
+    position: sticky;
+    top: calc(var(--altura-header) + var(--espaco-xl));
+  }
 }
