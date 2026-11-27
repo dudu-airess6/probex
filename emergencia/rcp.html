@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/emergencia.css">
 </head>
 <body class="modo-emergencia">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
 
     <header class="app-header" aria-label="Identificação do projeto">
         <div class="header-content">
@@ -45,7 +46,7 @@
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" id="conteudo-principal" tabindex="-1">
 
         <!-- LIGAR 192 ALERTA -->
         <section class="passo-alerta-grave" role="alert">
@@ -129,7 +130,7 @@
             <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#house"></use></svg></span>
             <span class="nav-label">Início</span>
         </a>
-        <a href="index.html" class="nav-item nav-emergency ativo">
+        <a href="index.html" class="nav-item nav-emergency ativo" aria-current="true">
             <span class="nav-icon" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#siren"></use></svg></span>
             <span class="nav-label">Emergência</span>
         </a>

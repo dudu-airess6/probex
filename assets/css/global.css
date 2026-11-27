@@ -201,3 +201,13 @@ button {
     padding: var(--espaco-xl);
   }
 }
+
+@media (min-width: 1440px) {
+  :root {
+    --largura-desktop: clamp(1120px, 78vw, 1440px);
+  }
+
+  .main-content {
+    padding-inline: clamp(var(--espaco-xl), 2.5vw, var(--espaco-2xl));
+  }
+}
