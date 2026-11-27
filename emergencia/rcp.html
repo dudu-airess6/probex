@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="Ressuscitação Cardiorrespiratória (RCP) Pediátrica - Guia Passo a Passo com Metrônomo (PROBEX / Unit)">
     <meta name="theme-color" content="#DC2626">
-    <title>RCP Pediátrica (30:2) | SBV Pediátrico</title>
+    <title>RCP Pediátrica | SBV Pediátrico</title>
     
     <!-- CSS Arquitetura Modular -->
     <link rel="stylesheet" href="../assets/css/variables.css">
@@ -38,11 +38,10 @@
     <header class="header-emergencia" aria-label="Navegação de emergência">
         <div class="header-emergencia-inner">
             <div class="header-emergencia-acoes">
-                <a href="index.html" class="btn-voltar-header"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#arrow-left"></use></svg> Triagem</a>
+                <a href="index.html" class="link-voltar"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#arrow-left"></use></svg> Triagem</a>
                 <span class="badge-emergencia-rapida"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#heart-pulse"></use></svg> PARADA CARDIORRESPIRATÓRIA (PCR)</span>
-                <a href="../index.html" class="btn-voltar-header"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#house"></use></svg> Início</a>
             </div>
-            <h1 id="rcp-titulo-faixa">RCP BEBÊ (&lt; 1 ANO) • 30:2</h1>
+            <h1 id="rcp-titulo-faixa">RCP BEBÊ (&lt; 1 ANO)</h1>
         </div>
     </header>
 
@@ -59,12 +58,12 @@
             <button type="button" class="btn-opcao-idade ativo" id="tab-rcp-bebe" aria-pressed="true">
                 <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#baby"></use></svg></span>
                 <span class="idade-titulo">TÉCNICA BEBÊ</span>
-                <span class="idade-faixa">&lt; 1 ano (~4 cm)</span>
+                <span class="idade-faixa">Menos de 1 ano · ~4 cm</span>
             </button>
             <button type="button" class="btn-opcao-idade" id="tab-rcp-crianca" aria-pressed="false">
                 <span class="idade-icone" aria-hidden="true"><svg class="icon" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#person-standing"></use></svg></span>
                 <span class="idade-titulo">TÉCNICA CRIANÇA</span>
-                <span class="idade-faixa">≥ 1 ano (~5 cm)</span>
+                <span class="idade-faixa">1 ano até a puberdade · ~5 cm</span>
             </button>
         </div>
 
@@ -73,7 +72,7 @@
             <section class="metronomo-box" aria-label="Metrônomo de compressões">
                 <div class="metronomo-pulso pulsando" id="metronomo-visual" aria-hidden="true"></div>
                 <div class="metronomo-bpm">RITMO: 100 - 120 BPM</div>
-                <p class="metronomo-descricao">Siga a frequência deste pulso para comprimir o peito sem parar.</p>
+                <p class="metronomo-descricao">Mantenha o ritmo das compressões e faça apenas pausas breves para ventilar.</p>
                 <button type="button" id="btn-toggle-audio" class="btn-metronomo-audio" aria-pressed="false">
                     <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#volume-2"></use></svg> Ligar Som do Metrônomo
                 </button>
@@ -84,21 +83,21 @@
                 <article class="passo-card">
                     
                     <header class="passo-header">
-                        <span class="passo-numero">CICLO 30 : 2</span>
-                        <span class="passo-total">30 Compressões + 2 Ventilações</span>
+                        <span class="passo-numero">CICLOS DE RCP</span>
+                        <span class="passo-total">1 socorrista: 30:2 · 2 socorristas: 15:2</span>
                     </header>
 
                     <div id="conteudo-tecnica-rcp" aria-live="polite">
                         <!-- Conteúdo atualizado dinamicamente via JS (emergencia.js) -->
                         <p class="passo-instrucao">
-                            1. Posicione o bebê de costas em superfície RÍGIDA e PLANA (chão ou mesa firme).
+                            1. Deite o bebê de costas no chão, sobre uma superfície firme e plana.
                         </p>
                         <p class="passo-instrucao">
-                            2. No centro do peito (logo abaixo da linha dos mamilos), comprima cerca de 4 cm (1/3 do tórax) com a base de uma mão ou os 2 polegares abraçando o tórax.
+                            2. Comprima a metade inferior do esterno cerca de 4 cm (1/3 do tórax), usando a base de uma mão ou os dois polegares com as mãos envolvendo o tórax.
                         </p>
                         <div class="passo-alerta-grave">
                             <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><use href="../assets/icons/lucide.svg#info"></use></svg>
-                            <strong>DIRETRIZ AHA 2025:</strong> A antiga técnica de 2 dedos foi substituída! Use a base de uma mão ou os 2 polegares abraçando o tórax.
+                            <strong>AHA/AAP 2025:</strong> Na RCP de bebês, não use a técnica de 2 dedos. Use uma mão ou os dois polegares com as mãos envolvendo o tórax.
                         </div>
                     </div>
 

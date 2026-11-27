@@ -15,7 +15,7 @@ const passosBebe = [
         numero: "PASSO 2 DE 5",
         instrucao: "2. Dê 5 GOLPES FIRMES no meio das costas do bebê (entre as escápulas) com a base da sua outra mão.",
         alertaPrefixo: "Dica: ",
-        alertaTexto: "Golpes firmes no sentido para fora para expulsar o corpo estranho."
+        alertaTexto: "Mantenha a cabeça e o pescoço apoiados durante os golpes."
     },
     {
         numero: "PASSO 3 DE 5",
@@ -25,15 +25,15 @@ const passosBebe = [
     },
     {
         numero: "PASSO 4 DE 5",
-        instrucao: "4. Faça 5 COMPRESSÕES no centro do peito (linha dos mamilos), afundando cerca de 4 cm com a base de uma mão ou dois polegares.",
-        alertaPrefixo: "ATENÇÃO (AHA 2025): ",
-        alertaTexto: "A antiga técnica de 2 dedos NÃO é mais recomendada. Use a base da mão ou dois polegares."
+        instrucao: "4. Faça 5 impulsos torácicos rápidos na metade inferior do esterno, usando a base da palma de uma mão.",
+        alertaPrefixo: "Técnica AHA/AAP 2025: ",
+        alertaTexto: "Para aliviar o engasgo grave em bebês, use a base da palma de uma mão nos impulsos torácicos."
     },
     {
         numero: "PASSO 5 DE 5",
-        instrucao: "5. REPITA o ciclo de 5 golpes nas costas e 5 compressões no peito sem parar até o objeto ser expulso ou o bebê desmaiar.",
+        instrucao: "5. REPITA o ciclo de 5 golpes nas costas e 5 impulsos torácicos até o objeto sair ou o bebê ficar inconsciente.",
         alertaPrefixo: "Emergência: ",
-        alertaTexto: "Se o bebê ficar mole e sem resposta, clique no botão vermelho abaixo para iniciar a RCP imediata!"
+        alertaTexto: "Se o bebê ficar inconsciente, inicie a RCP imediatamente pelas compressões torácicas; não verifique pulso."
     }
 ];
 
@@ -55,37 +55,37 @@ const passosCrianca = [
         numero: "PASSO 3 DE 4",
         instrucao: "3. Fique atrás da criança, abrace a cintura, feche uma mão em punho (polegar para a barriga) 2 dedos acima do umbigo. Cubra com a outra mão e puxe rápido para DENTRO e para CIMA 5 vezes (Heimlich).",
         alertaPrefixo: "Posição: ",
-        alertaTexto: "Mão posicionada acima do umbigo e bem abaixo do osso do peito (esterno)."
+        alertaTexto: "Posicione o punho acima do umbigo e bem abaixo do osso do peito (esterno)."
     },
     {
         numero: "PASSO 4 DE 4",
-        instrucao: "4. REPITA alternando 5 golpes nas costas e 5 compressões na barriga até o objeto sair ou a criança desmaiar.",
+        instrucao: "4. REPITA alternando 5 golpes nas costas e 5 impulsos abdominais até o objeto sair ou a criança ficar inconsciente.",
         alertaPrefixo: "Emergência: ",
-        alertaTexto: "Se a criança desmaiar, deite-a no chão e clique no botão vermelho abaixo para iniciar a RCP!"
+        alertaTexto: "Se a criança ficar inconsciente, inicie a RCP imediatamente pelas compressões torácicas; não verifique pulso."
     }
 ];
 
 // --- Conteúdo Dinâmico da RCP (Bebê vs Criança) ---
 const tecnicasRcp = {
     bebe: {
-        titulo: "RCP BEBÊ (< 1 ANO) • 30:2",
+        titulo: "RCP BEBÊ (< 1 ANO)",
         passos: [
-            "1. Posicione o bebê de costas em superfície RÍGIDA e PLANA (chão ou mesa firme).",
-            "2. No centro do peito (logo abaixo da linha dos mamilos), comprima cerca de 4 cm (1/3 do tórax) com a base de uma mão ou os 2 polegares abraçando o tórax.",
-            "3. Aplique 30 compressões no ritmo do metrônomo (100 a 120/min), deixando o peito retornar totalmente, seguidas de 2 ventilações suaves (ou compressões contínuas se não souber ventilar)."
+            "1. Deite o bebê de costas no chão, sobre uma superfície firme e plana.",
+            "2. Comprima a metade inferior do esterno cerca de 4 cm (1/3 do tórax), usando a base de uma mão ou os dois polegares com as mãos envolvendo o tórax.",
+            "3. Faça compressões a 100–120 por minuto e permita o retorno completo do tórax. Faça 30 compressões e 2 ventilações se estiver sozinho(a), ou 15 compressões e 2 ventilações com 2 socorristas. Se não for possível ventilar, mantenha as compressões enquanto aguarda ajuda."
         ],
-        alertaPrefixo: "DIRETRIZ AHA 2025: ",
-        alertaTexto: "A antiga técnica de 2 dedos foi substituída! Use a base de uma mão ou os 2 polegares abraçando o tórax."
+        alertaPrefixo: "AHA/AAP 2025: ",
+        alertaTexto: "Na RCP de bebês, não use a técnica de 2 dedos. Use uma mão ou os dois polegares com as mãos envolvendo o tórax."
     },
     crianca: {
-        titulo: "RCP CRIANÇA (≥ 1 ANO) • 30:2",
+        titulo: "RCP CRIANÇA (1 ANO ATÉ A PUBERDADE)",
         passos: [
-            "1. Posicione a criança de costas em superfície RÍGIDA e PLANA (no chão).",
-            "2. No centro do peito (metade inferior do esterno), comprima cerca de 5 cm (1/3 do tórax) usando a base de 1 mão ou as 2 mãos entrelaçadas, conforme o porte da criança.",
-            "3. Aplique 30 compressões firmes no ritmo do metrônomo (100 a 120/min), permitindo o retorno completo do tórax, seguidas de 2 ventilações (ou compressões contínuas sem parar)."
+            "1. Deite a criança de costas no chão, sobre uma superfície firme e plana.",
+            "2. Comprima a metade inferior do esterno cerca de 5 cm (1/3 do tórax), usando uma ou duas mãos conforme o porte da criança.",
+            "3. Faça compressões a 100–120 por minuto e permita o retorno completo do tórax. Faça 30 compressões e 2 ventilações se estiver sozinho(a), ou 15 compressões e 2 ventilações com 2 socorristas. Se não for possível ventilar, mantenha as compressões enquanto aguarda ajuda."
         ],
         alertaPrefixo: "ATENÇÃO: ",
-        alertaTexto: "Mantenha os braços esticados e os ombros alinhados acima das mãos para não perder profundidade nas compressões."
+        alertaTexto: "Mantenha os braços estendidos e os ombros alinhados acima das mãos para ajudar a alcançar a profundidade adequada."
     }
 };
 

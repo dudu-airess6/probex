@@ -473,15 +473,73 @@
   max-width: 68ch;
 }
 
+.learning-intro--card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: none;
+  padding: clamp(var(--espaco-md), 4vw, 2.5rem);
+  border-radius: 28px 28px 28px 5px;
+  background-color: var(--cor-principal-leve);
+}
+
+.learning-intro--card::after {
+  position: absolute;
+  z-index: -1;
+  top: -54px;
+  right: -42px;
+  width: 132px;
+  height: 132px;
+  border-radius: 63% 37% 58% 42% / 50% 44% 56% 50%;
+  background-color: var(--cor-destaque);
+  content: "";
+  opacity: 0.65;
+}
+
+.learning-intro-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.learning-intro-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+}
+
 .learning-intro h1 {
-  font-size: var(--tamanho-fonte-3xl);
-  margin-bottom: var(--espaco-sm);
+  color: var(--cor-texto);
+  font-size: clamp(var(--tamanho-fonte-3xl), 5vw, 3rem);
+  line-height: 1.12;
+  margin: 0;
+  text-wrap: balance;
 }
 
 .learning-intro p {
+  max-width: 68ch;
   color: var(--cor-texto-suave);
-  font-size: var(--tamanho-fonte-lg);
+  font-size: clamp(var(--tamanho-fonte-md), 3vw, var(--tamanho-fonte-lg));
   line-height: 1.6;
+  margin: 0;
+}
+
+.learning-intro-mark {
+  display: grid;
+  place-items: center;
+  flex: 0 0 clamp(48px, 10vw, 72px);
+  width: clamp(48px, 10vw, 72px);
+  height: clamp(48px, 10vw, 72px);
+  border: 1px solid var(--cor-principal);
+  border-radius: 22px 22px 22px 5px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-principal);
+}
+
+.learning-intro-mark .icon {
+  width: clamp(24px, 4vw, 32px);
+  height: clamp(24px, 4vw, 32px);
 }
 
 .learning-modules-grid {
@@ -1492,13 +1550,59 @@
   padding-top: var(--espaco-lg);
 }
 
-.module-back-link {
+.link-voltar {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--espaco-sm);
-  min-height: 48px;
+  min-height: 44px;
   width: fit-content;
+  padding: 6px 12px 6px 7px;
+  border: 1px solid var(--cor-principal-leve);
+  border-left: 3px solid var(--cor-principal);
+  border-radius: 15px 15px 15px 4px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-geral);
+  font-size: var(--tamanho-fonte-sm);
   font-weight: var(--peso-bold);
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background-color var(--transicao-rapida), border-color var(--transicao-rapida), color var(--transicao-rapida);
+}
+
+.link-voltar .icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  padding: 6px;
+  border-radius: 10px 10px 10px 3px;
+  background-color: var(--cor-principal-leve);
+  color: var(--cor-principal);
+  transition: transform var(--transicao-rapida), background-color var(--transicao-rapida);
+}
+
+.link-voltar:hover,
+.link-voltar:focus-visible {
+  border-color: var(--cor-principal);
+  background-color: var(--cor-principal-leve);
+  color: var(--cor-principal-hover);
+}
+
+.link-voltar:hover .icon,
+.link-voltar:focus-visible .icon {
+  transform: translateX(-2px);
+  background-color: var(--cor-fundo);
+}
+
+.link-voltar:focus-visible {
+  outline: 3px solid var(--cor-principal);
+  outline-offset: 2px;
+}
+
+.action-grid-2 > .link-voltar {
+  width: 100%;
+  min-height: 54px;
 }
 
 .law-hero {
