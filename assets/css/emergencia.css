@@ -654,3 +654,179 @@ body.modo-emergencia {
     top: calc(var(--altura-header) + var(--espaco-xl));
   }
 }
+
+/* --- Identidade PROBEX nas telas de atendimento --- */
+body.modo-emergencia {
+  background-color: var(--cor-fundo-alt);
+}
+
+.header-emergencia {
+  border-radius: 0 0 24px 5px;
+  box-shadow: none;
+}
+
+.header-emergencia h1 {
+  max-width: 28ch;
+  font-size: clamp(var(--tamanho-fonte-lg), 3.5vw, var(--tamanho-fonte-2xl));
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+.badge-emergencia-rapida {
+  border-radius: var(--raio-md);
+  letter-spacing: 0.02em;
+}
+
+.triagem-container {
+  margin-top: var(--espaco-lg);
+}
+
+.card-triagem {
+  border-width: 2px;
+  border-radius: 22px 22px 22px 5px;
+  box-shadow: none;
+}
+
+.card-triagem.triagem-engasgo {
+  border-color: var(--cor-destaque-texto);
+  background-color: var(--cor-destaque);
+}
+
+.card-triagem.triagem-pcr {
+  border-color: var(--cor-emergencia);
+  background-color: var(--cor-emergencia-leve);
+}
+
+.triagem-icone {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px 15px 15px 4px;
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+.triagem-engasgo .triagem-icone {
+  color: var(--cor-destaque-texto);
+}
+
+.triagem-pcr .triagem-icone {
+  color: var(--cor-emergencia);
+}
+
+.triagem-icone .icon {
+  width: 25px;
+  height: 25px;
+}
+
+.btn-opcao-idade {
+  min-height: 132px;
+  border-width: 2px;
+  border-radius: 18px 18px 18px 4px;
+  box-shadow: none;
+  transition: background-color var(--transicao-rapida), border-color var(--transicao-rapida), color var(--transicao-rapida);
+}
+
+.btn-opcao-idade:hover,
+.btn-opcao-idade:focus-visible {
+  border-color: var(--cor-principal-hover);
+  background-color: var(--cor-principal-leve);
+  color: var(--cor-texto);
+}
+
+.btn-opcao-idade.ativo {
+  border-color: var(--cor-principal);
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-inverso);
+}
+
+.btn-opcao-idade .idade-icone {
+  color: var(--cor-principal);
+}
+
+.btn-opcao-idade.ativo .idade-icone {
+  color: var(--cor-texto-inverso);
+}
+
+.passo-alerta-grave {
+  border-radius: 0 14px 14px 0;
+  background-color: var(--cor-emergencia-leve);
+}
+
+.passo-alerta-info {
+  border-left-color: var(--cor-principal);
+  background-color: var(--cor-principal-leve);
+}
+
+.passo-card {
+  border: 0;
+  border-left: 4px solid var(--cor-emergencia);
+  border-radius: 0 20px 20px 0;
+  box-shadow: var(--sombra-sm);
+}
+
+.passo-header {
+  border-bottom-width: 1px;
+}
+
+.dica-revezamento {
+  border-radius: 0 12px 12px 0;
+  background-color: var(--cor-principal-leve);
+}
+
+.card-proibicoes {
+  background-color: var(--cor-emergencia-leve);
+}
+
+.card-orientacoes {
+  background-color: var(--cor-principal-leve);
+}
+
+.card-dea-local {
+  border-color: var(--cor-destaque);
+  border-left-color: var(--cor-destaque-texto);
+  border-radius: 0 16px 16px 0;
+  background-color: var(--cor-destaque);
+}
+
+.card-escola-destaque {
+  border-radius: 0 14px 14px 0;
+}
+
+.btn-passo {
+  border-radius: 15px 15px 15px 4px;
+  box-shadow: none;
+}
+
+.btn-passo-prox {
+  box-shadow: var(--sombra-sm);
+}
+
+.emergency-instructions-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-sm);
+  min-height: 48px;
+  margin-top: var(--espaco-sm);
+  color: var(--cor-principal-hover);
+  font-weight: var(--peso-bold);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.emergency-instructions-link .icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 380px) {
+  .triagem-icone {
+    width: 40px;
+    height: 40px;
+  }
+
+  .triagem-icone .icon {
+    width: 22px;
+    height: 22px;
+  }
+}
